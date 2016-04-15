@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<DemoFramework>
 <!--
 ##############################################################################
 #  Copyright (c) 2016 by Patrick Kutch https://github.com/PatrickKutch
@@ -20,7 +22,6 @@
 #
 ##############################################################################
 -->
-<DemoFramework>
     <Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto">
         <CreationSize Width="1680" Height="1016"/>
         <Network Port="5200"/> 
