@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<MarvinExternalFile>
+	<Tab>
+		<Title>Indicators</Title>
+		<Widget File="Text\Text.xml" row="0" column="0" Align="Center">
+			<InitialValue> Various Indicator and Progress Widgets</InitialValue>
+			<StyleOverride ID="Intel-title"/>
+		</Widget>
+		<Grid row="1" column="0" Align="Center">
+			<Widget File="Indicator\ProgressBar.xml" row="1" column="1" Width="800" Height="40" colSpan="2">
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="Indicator\ProgressIndicator.xml" row="2" column="1"  Width="400">
+				<Title>Throughput</Title>
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="Indicator\ProgressIndicator.xml" row="2" column="2"  Width="400" Height="400">
+				<StyleOverride ID="red"/>
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="LED\BargraphHorizontalLED1.xml" row="3" column="1" Width="400" Align="Center">
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="LED\BargraphHorizontalLED.xml" row="3" column="2" Width="400" Align="Center">
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="LED\BargraphVerticalLED.xml" row="1" column="4" Height="400" rowSpan="3" >
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="LED\BargraphVerticalLED1.xml" row="1" column="3" Height="400" rowSpan="3" >
+				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+			</Widget>
+		</Grid>
+
+	</Tab>
+</MarvinExternalFile>

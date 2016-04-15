@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes: These is the xml for a basic gauge from 1 to 100 with 4 sections
+-->
+
+<Widget Type = "SteelGaugeRadial">
+    <Style>GaugeRadial.IOPs.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>10</MaxValue>
+    <UnitText> </UnitText>
+    <Decimals>0</Decimals>
+    <DialStartAngle>300</DialStartAngle>
+    <DialRangeAngle>240</DialRangeAngle>
+    <MajorTicksSpace>2</MajorTicksSpace>
+    <MinorTicksSpace>1</MinorTicksSpace>
+    <TickLableOrientation>Orthogonal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+</Widget>

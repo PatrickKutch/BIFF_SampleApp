@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<MarvinExternalFile>
+	<AliasList>
+		<Alias MainDialHeight="350"/> 	
+		<Alias OtherDialHeight="192"/> 	
+		<Alias SpacerHeight="200"/>
+		<Alias UpperLeftDial="Demo/DemoWidgets/MultiGauge/UpperLeftDial.xml"/>
+		<Alias UpperRightDial="Demo/DemoWidgets/MultiGauge/UpperRightDial.xml"/>
+		<Alias MainDialidget="Demo/DemoWidgets/MultiGauge/CenterDial.xml"/>
+	</AliasList>
+	<Grid>
+		<Grid row="0" column="0">
+			<!-- **************** Top Left Dial *********** -->
+			<Widget File="$(UpperLeftDial)" row="0" column="0" Height="$(OtherDialHeight)">
+				<MinionSrc ID="$(UL_ID)" Namespace="$(UL_NAMESPACE)"/>
+				<Title>$(UL_TITLE)</Title>	
+			</Widget>
+			<!-- **************** Top Right *********** -->
+			
+			<Widget File="$(UpperRightDial)" row="0" column="2" Height="$(OtherDialHeight)">
+				<MinionSrc ID="$(UR_ID)" Namespace="$(UR_NAMESPACE)"/>
+				<Title>$(UR_TITLE)</Title>	
+			</Widget>
+			<!-- **************** Spacer *********** -->
+			<Widget File="Spacer.xml" Width="$(SpacerHeight)" Height="$(SpacerHeight)" row="1" column="1"/>
+
+			<!-- **************** Main Dial *********** -->
+ 			<Widget File="$(MainDialidget)" row="0" column="0" align="S" colspan="3" rowspan="3" Height="$(MainDialHeight)">
+				<MinionSrc ID="$(CENTER_ID)" Namespace="$(CENTER_NAMESPACE)"/>
+				<Title>$(CENTER_TITLE)</Title>				
+			</Widget>
+ 		</Grid>
+	</Grid>
+
+</MarvinExternalFile>

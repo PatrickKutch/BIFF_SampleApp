@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes:
+-->
+
+
+<Widget Type = "Steel180Gauge">
+    <Style>GaugeOneEighty10GbE.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>10</MaxValue>
+    <UnitText>Gbps</UnitText>
+</Widget>

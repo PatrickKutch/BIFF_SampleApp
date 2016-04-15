@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes:
+-->
+
+
+<Widget Type = "SteelGauge">
+    <Style>GaugeCPU.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>100</MaxValue>
+    <UnitText>Percent</UnitText>
+    <Decimals>0</Decimals>
+    <DialStartAngle>300</DialStartAngle>
+    <DialRangeAngle>240</DialRangeAngle>
+    <MajorTicksSpace>10</MajorTicksSpace>
+    <MinorTicksSpace>1</MinorTicksSpace>
+    <TickLableOrientation>Horizontal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+    <Shadowed>True</Shadowed>
+    <ShowMaxMeasuredValue>True</ShowMaxMeasuredValue>
+    <ShowMinMeasuredValue>False</ShowMinMeasuredValue>
+    <Sections>
+        <Section start="0" end="10" />
+        <Section start="10" end="90" />
+        <Section start="90" end="100" />
+    </Sections>
+</Widget>

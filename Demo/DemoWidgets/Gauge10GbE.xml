@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes: These is the xml for a 10GbE Gauge
+-->
+
+<Widget Type = "SteelGauge">
+    <Style>Gauge10GbE.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>10</MaxValue>
+    <UnitText>Gbps</UnitText>
+    <Decimals>2</Decimals>
+    <DialStartAngle>300</DialStartAngle>
+    <DialRangeAngle>240</DialRangeAngle>
+    <MajorTicksSpace>1</MajorTicksSpace>
+    <MinorTicksSpace>1</MinorTicksSpace>
+    <TickLableOrientation>Horizontal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+    <Shadowed>True</Shadowed>
+    <ShowMaxMeasuredValue>True</ShowMaxMeasuredValue>
+    <ShowMinMeasuredValue>False</ShowMinMeasuredValue>
+    <Sections>
+        <Section start="0" end="4" />
+        <Section start="2.5" end="5" />
+        <Section start="5" end="9.5" />
+        <Section start="9.5" end="10" />
+    </Sections>
+</Widget>

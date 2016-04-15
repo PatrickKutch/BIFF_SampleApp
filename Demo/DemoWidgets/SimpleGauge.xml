@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Widget Type = "SteelSimpleGauge">
+    <Style>SimpleGauge.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>$(CENTER_MAX)</MaxValue>
+    <Decimals>2</Decimals>
+    <UnitText></UnitText>
+    <Sections>
+        <Section start="0" end="$(CENTER_MIDRANGE)" />
+        <Section start="$(CENTER_MIDRANGE)" end="$(CENTER_MAX)" />
+    </Sections>
+</Widget>

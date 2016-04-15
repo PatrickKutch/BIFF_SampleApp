@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Widget Type = "SteelSimpleGauge">
+    <Style>GaugeSimple10GbE.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>10</MaxValue>
+    <Decimals>1</Decimals>
+    <UnitText>Gbps</UnitText>
+    <Sections>
+        <Section start="0" end="4" />
+        <Section start="2.5" end="5" />
+        <Section start="5" end="9.5" />
+        <Section start="9.5" end="10" />
+    </Sections>
+</Widget>

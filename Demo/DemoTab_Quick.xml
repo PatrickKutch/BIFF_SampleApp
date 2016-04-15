@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+--> 
+<MarvinExternalFile>
+	<Tab>
+
+		<Title>Quick View</Title>
+
+		<Widget File="Text\Text.xml" row="$(CurrentRowAlias)" column="$(CurrentColumnAlias)">
+			<InitialValue>Quick View Ability - uses RegEx filtering</InitialValue>
+			<StyleOverride ID="Intel-title"/>
+		</Widget>
+		<Widget File="Quick/QuickView.xml" row="$(NextRowAlias)" Column="$(CurrentColumnAlias)" hgap="5" vgap="5">
+			<MinionSrc Namespace="DemoNamespace" ID="(.*)"></MinionSrc>
+			<ExcludeList>CPU_LIST;CPU_LIST2</ExcludeList>
+		</Widget>
+		<Widget File="Quick/QuickViewLCD.xml" row="$(NextRowAlias)" Column="$(CurrentColumnAlias)" hgap="5" vgap="5">
+			<MinionSrc Namespace="DemoNamespace" ID="(.*)"></MinionSrc>
+			<ExcludeList>CPU_LIST;CPU_LIST2</ExcludeList>
+		</Widget>
+	</Tab>
+</MarvinExternalFile>

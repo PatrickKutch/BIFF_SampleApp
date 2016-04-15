@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes:
+-->
+
+<Widget Type = "SteelGauge">
+    <Style>gaugeIOPs.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>25000</MaxValue>
+    <UnitText>IOPs</UnitText>
+    <Decimals>0</Decimals>
+    <DialStartAngle>300</DialStartAngle>
+    <DialRangeAngle>240</DialRangeAngle>
+    <MajorTicksSpace>5000</MajorTicksSpace>
+    <MinorTicksSpace>500</MinorTicksSpace>
+    <TickLableOrientation>Horizontal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+    <Shadowed>True</Shadowed>
+    <ShowMaxMeasuredValue>True</ShowMaxMeasuredValue>
+    <ShowMinMeasuredValue>False</ShowMinMeasuredValue>
+    <Sections>
+        <Section start="0" end="3000" />
+        <Section start="3000" end="10000" />
+        <Section start="10000" end="25000" />
+    </Sections>
+</Widget>

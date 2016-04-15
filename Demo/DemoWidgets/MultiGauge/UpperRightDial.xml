@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes: These is the xml for a 10GbE Gauge
+-->
+
+<Widget Type = "SteelGauge">
+    <Style>UpperGauge.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>$(CENTER_MIDRANGE)</MaxValue>
+    <UnitText>$(UPPER_RIGHT_UNIT)</UnitText>
+    <Decimals>2</Decimals>
+    <DialStartAngle>250</DialStartAngle>
+    <DialRangeAngle>210</DialRangeAngle>
+    <MajorTicksSpace>5</MajorTicksSpace>
+    <MinorTicksSpace>1</MinorTicksSpace>
+    <TickLableOrientation>Horizontal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+    <Shadowed>True</Shadowed>
+    <ShowMaxMeasuredValue>True</ShowMaxMeasuredValue>
+    <ShowMinMeasuredValue>False</ShowMinMeasuredValue>
+    <Sections>
+        <Section start="0" end="$(UPPER_MIDRANGE)" />
+        <Section start="$(UPPER_MIDRANGE)" end="$(CENTER_MIDRANGE)" />
+    </Sections>
+</Widget>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2016 by Patrick Kutch https://github.com/PatrickKutch
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#    Simple Tab
+#
+##############################################################################
+-->
+<MarvinExternalFile>
+    <Tab>
+        <Title>Image Examples</Title>
+        <Widget File="Text\Text.xml" row="1" column="0" rowSpan="2">
+            <InitialValue>Animated GIFs</InitialValue>
+            <StyleOverride>
+                <Item>-fx-rotate:-90;</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" column="0">
+            <Title>Button</Title>
+            <StyleOverride>
+                <Item>
+                    -fx-font-size: 1.5em
+                </Item>
+            </StyleOverride>
+            <Image Height="40" Width="40">Demo\images/PlayerControl/LiveBtn1.png</Image>        
+        </Widget>
+        <Widget File="Image\ImageScale.xml" row="1" column="1" >
+            <Source>Demo\images\ajax_loader_blue_256.gif</Source>
+        </Widget>
+        <Widget File="Image\ImageScale.xml" row="2" column="1" >
+            <Source>Demo\images\ajax_loader_gray_256.gif</Source>
+        </Widget>
+        <Widget File="Text\Text.xml" row="3" column="0" >
+            <InitialValue>Controlled by a Minion</InitialValue>
+        </Widget>
+        <Widget File="Image\DynamicImage.xml" row="3" column="1" Height="250">
+            <MinionSrc ID="TrafficLight" Namespace="DemoNamespace"/>
+            <Image Source="Demo\images\yellowlight.png" ID="2"/>
+            <Image Source="Demo\images\greenlight.png" ID="1"/>
+            <Image Source="Demo\images\redlight.png" ID="3"/>
+            <Initial ID="1"/>            
+        </Widget>
+        <Grid row="1" column="2" rowSpan="3">
+            <Widget File="Text\Text.xml" row="0" column="1" colSpan="2">
+                <InitialValue>Dynamic Images Locally manipulated</InitialValue>
+            </Widget>
+            <Widget File="Image\DynamicImage.xml" row="1" column="1" colSpan="2" Height="600">
+                <MinionSrc ID="vxlan_slide" Namespace="DemoNamespace_DynaImage"/>
+                <Image Source="Demo\images\VXLAN_4ports.png" ID="4ports"/>
+                <Image Source="Demo\images\VXLAN_5ports.png" ID="5ports"/>
+                <Image Source="Demo\images\VXLAN_6ports.png" ID="6ports"/>
+                <Image Source="Demo\images\VXLAN_7ports.png" ID="7ports"/>
+                <Image Source="Demo\images\VXLAN_8ports.png" ID="8ports"/>
+                <Image Source="Demo\images\VXLAN_9ports.png" ID="9ports"/>
+                <Image Source="Demo\images\VXLAN_10ports.png" ID="10ports"/>
+                <Image Source="Demo\images\VXLAN_11ports.png" ID="11ports"/>
+                <Image Source="Demo\images\VXLAN_12ports.png" ID="12ports"/>
+                <Initial ID="4ports"/>
+            </Widget>
+            <Widget File="Button\Button.xml" row="2" column="2" Task="NextImage">
+                <Title>>></Title>
+            </Widget>
+        </Grid>
+        <TaskList ID="NextImage">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="vxlan_slide" Namespace="DemoNamespace_DynaImage" Data="Next"/> 
+            </TaskItem>
+        </TaskList>
+  
+    </Tab>
+</MarvinExternalFile>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<MarvinExternalFile>
+    <Tab>
+        <Title>Example</Title>
+        <Grid row="3" column="3" Align="Center" rowSpan="3">
+            <Widget File="Storage\GaugeIOPs.xml" row="2" column="2" Width="800">
+                <Title>Throughput</Title>
+                <MinionSrc ID="IOPS" Namespace="DemoNamespace"/>
+            </Widget>
+        </Grid>
+        <Grid row="3" column="4" Align="Center">
+            <Widget File="Chart\ChartBar.xml" row="1" column="1">
+                <Title> CPU Utilization</Title>
+                <xAxis Label="CPU Number" MaxEntries="32"/>
+                <yAxis Label="% Utilization" MaxValue="100"/>
+                <MinionSrc ID="CPU_LIST2" Namespace="DemoNamespace"/> 
+                <StyleOverride>
+                    <Item>-fx-legend-visible:false;
+                        -fx-bar-gap:1;-fx-category-gap:1;</Item>
+                </StyleOverride>
+            </Widget>
+            <Grid row="2" column="1" Align="Center" hgap="20" vgap="10">
+                <Widget File="LCD\LCD.xml" row="0" column="0" Height="150" Width="550">
+                    <MinionSrc ID="GraphSource4" Namespace="DemoNamespace"/>
+                    <UnitsOverride>kT/S</UnitsOverride>
+                    <Title>SSD</Title>
+                </Widget>
+                <Widget File="LCD\LCD.xml" row="1" column="0" Height="150" Width="550">
+                    <MinionSrc ID="GraphSource3" Namespace="DemoNamespace"/>
+                    <UnitsOverride>kT/S</UnitsOverride>
+                    <Title>HDD</Title>
+                </Widget>
+            </Grid>
+        </Grid>
+    </Tab>
+</MarvinExternalFile>

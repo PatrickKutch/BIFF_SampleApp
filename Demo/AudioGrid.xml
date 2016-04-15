@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarvinExternalFile>
+    <AliasList>
+        <Alias PlaybackControlNamespace="AudioControlNamespace"/>
+        <Alias MinionNamespace="AudioMinionNamespace"/>
+        <Alias PlaybackControlID = "VIDPBCTRL"/>
+        <Alias MinionID = "AudioPlayer"/>
+        <Alias PlaybackRow="3"/>
+    </AliasList>
+    <Grid>
+        <Widget File="Media\AudioPlayer.xml" row="1" column="1">
+            <Audio Source="Demo\Media\01 - Heartbreaker.mp3" ID="Audio_1"/>
+            <Audio Source="Demo\Media\song.mp3" ID="Audio_2"/>
+            <Audio Source="Demo\Media\02 - We Live For Love.mp3" ID="Audio_3"/>
+            <Audio Source="Demo\Media\04 - Hell Is For Children.mp3" ID="Audio_4"/>
+            <Audio Source="Demo\Media\03 - Hit Me With Your Best Shot.mp3" ID="HitME"/>
+                        
+            <Repeat Mode="LoopList">True</Repeat> 
+            <Initial ID="HitME"/>
+            <AutoStart>False</AutoStart>
+            <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
+            <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
+        </Widget>
+        <Grid File = "Demo\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="AudioID" SelectListID="Audio Selection"/>
+    </Grid>
+    
+    <Prompt ID="Audio Selection" Type="ListBox">
+        <Title>Video Player</Title>
+        <Message>Select which video to play</Message>
+        <List>
+            <Item Text="Heartbreaker">Audio_1</Item>
+            <Item Text="Gloria Estafan">Audio_2</Item>
+            <Item Text="We Live for Love">Audio_3</Item>
+            <Item Text="Hell is for Children">Audio_4</Item>
+            <Item Text="Hit me with your best shot">HitMe</Item>
+        </List>
+    </Prompt>
+    
+    <TaskList ID = "ShowAudioControl">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="Peekaboo.$(MinionID)" NameSpace = "Peekaboo.$(MinionNamespace)"  Data="@Hide or Show"/> 
+        </TaskItem>
+    </TaskList>
+    
+</MarvinExternalFile>

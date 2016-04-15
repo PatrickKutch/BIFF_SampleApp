@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarvinExternalFile>
+    <Tab>
+        <Title>Media</Title>
+        <Widget File="Text\Text.xml" row="1" column="0">
+            <InitialValue>Video </InitialValue>
+            <StyleOverride ID="Intel-title"/>
+        </Widget>
+        <Widget File="Text\Text.xml" row="1" column="1">
+            <InitialValue>Audio</InitialValue>
+            <StyleOverride ID="Intel-title"/>
+        </Widget>
+       <Grid File="Demo\VideoGrid.xml" row="2" column="0"/>
+       <Grid File="Demo\AudioGrid.xml" row="2" column="1"/>
+    </Tab>
+</MarvinExternalFile>

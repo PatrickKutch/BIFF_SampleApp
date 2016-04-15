@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Notes: These is the xml for a 10GbE Gauge
+-->
+
+<Widget Type = "SteelGauge">
+    <Style>CenterDial.css</Style>
+    <MinValue>0</MinValue>
+    <MaxValue>$(CENTER_MAX)</MaxValue>
+    <UnitText>$(CENTER_UNITS)</UnitText>
+    <Decimals>2</Decimals>
+    <DialStartAngle>300</DialStartAngle>
+    <DialRangeAngle>240</DialRangeAngle>
+    <MajorTicksSpace>10</MajorTicksSpace>
+    <MinorTicksSpace>1</MinorTicksSpace>
+    <TickLableOrientation>Horizontal</TickLableOrientation>
+    <EnhancedRateText>True</EnhancedRateText>
+    <Shadowed>True</Shadowed>
+    <ShowMaxMeasuredValue>True</ShowMaxMeasuredValue>
+    <ShowMinMeasuredValue>False</ShowMinMeasuredValue>
+    <Sections>
+        <Section start="0" end="$(CENTER_MIDRANGE)" />
+        <Section start="$(CENTER_MIDRANGE)" end="$(CENTER_MAX)" />
+    </Sections>
+</Widget>

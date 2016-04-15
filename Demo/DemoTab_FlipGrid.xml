@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<MarvinExternalFile>
+    <AliasList>
+        <Alias Width="150" Height="150"/>
+    </AliasList>
+    <Grid hgap="2">
+        <Widget File="FlipPanel\FlipPanelNoButtonsVertical.xml" row="1" column="0" colSpan="2">
+            <MinionSrc ID="FlipIt.$(FlipID)" Namespace="local"/>
+            <Front>
+                <Widget File="Spacer.xml" row="0" column="0" Width="$(Width)" Height="$(Height)">
+                    <StyleOverride>
+                        <Item>-fx-background-color:white</Item>
+                    </StyleOverride>
+                </Widget>
+            </Front>
+            <Back>
+                <Widget File="Spacer.xml" row="0" column="0" Width="$(Width)" Height="$(Height)"/>
+            </Back>
+        </Widget>
+    </Grid>
+    
+    <TaskList ID="FlipIt.$(FlipID)">
+        <TaskItem Type="Marvin" Postpone="$(Delay)">
+            <DataToInsert ID="FlipIt.$(FlipID)" Namespace="local" Data="Flip"/>
+        </TaskItem>
+    </TaskList>
+</MarvinExternalFile>

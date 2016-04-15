@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarvinExternalFile>
+    <Tab>
+        <Title>Grids</Title>
+
+        <Widget File="Spacer.xml" row="1" column="2" Width="20" >
+            <StyleOverride>
+                <Item>-fx-background-color: red</Item>
+            </StyleOverride>
+        </Widget>
+
+        <Grid File="Demo\DemoTab_GridFile.xml" row="1" column="3" hgap="0" vgap="0" Align="Center" Color1="red" Color2="white" > 
+            <Grid row="1" column="1" hgap="0" vgap="0" Align="Center"> 
+                <Widget File="Spacer.xml" row="0" column="0" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: red</Item>
+                    </StyleOverride>
+                </Widget>
+            
+                <Widget File="Spacer.xml" row="0" column="1" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: white</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="0" column="2" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: blue</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="1" column="2" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: red</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="1" column="0" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: white</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="1" column="1" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: blue</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="2" column="1" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: red</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="2" column="2" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: white</Item>
+                    </StyleOverride>
+                </Widget>
+                <Widget File="Spacer.xml" row="2" column="0" Width="50" Height="50">
+                    <StyleOverride>
+                        <Item>-fx-background-color: blue</Item>
+                    </StyleOverride>
+                </Widget>
+            
+                <Grid row="2" column="2" Align="Center"> 
+                    <Widget File="Spacer.xml" row="0" column="0" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: red</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="0" column="1" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: green</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="0" column="2" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: blue</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="1" column="2" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: red</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="1" column="0" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: green</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="1" column="1" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: blue</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="2" column="1" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: red</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="2" column="2" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: green</Item>
+                        </StyleOverride>
+                    </Widget>
+                    <Widget File="Spacer.xml" row="2" column="0" Width="10" Height="10">
+                        <StyleOverride>
+                            <Item>-fx-background-color: blue</Item>
+                        </StyleOverride>
+                    </Widget>
+                </Grid>
+            </Grid>
+            <Widget File="Spacer.xml" row="0" column="4" width="10"/>
+            <Grid File="Demo\DemoTab_GridFile.xml" row="0" column="5" hgap="0" vgap="0" rowSpan="3" Align="Center" Color1="goldenrod" Color2="purple" Color3="green"/> 
+        
+            <Widget File="Text\Text.xml" row="1" column="0" colSpan="3">
+                <InitialValue>Grids Within Grids</InitialValue>
+                <StyleOverride>
+                    <Item>-fx-rotate:-45</Item>
+                    <Item> -fx-background-color: black</Item>
+                </StyleOverride>
+            </Widget>
+        </Grid> 
+        <Grid row="1" column="1"> <!-- Tic Tac Toe Grid -->
+            <Widget File="Text\Text.xml" row="0" column="1">
+                <StyleOverride ID="$(DownloadFont)"/>
+                <InitialValue>Play Tic-Tac-Toe!</InitialValue>
+            </Widget>
+            <Widget File="Button\Button.xml" row="2" column="1"  Task="ResetPressed">
+                <Title> Reset Tic-Tac-Toe Board</Title>
+            </Widget>
+            <Grid row="1" column="1" hgap="1" vgap="1"> <!-- Tic Tac Toe Grid -->
+                <StyleOverride>
+                    <Item>-fx-grid-lines-visible : true</Item>
+                </StyleOverride>
+                <Widget File="Image\ImageScale.xml" row="0" column="0" Task="blankHit_00">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_00" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="0" Task="xHit_00">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_00" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="0" Task="oHit_00">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_00" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="1" Task="blankHit_01">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_01" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="1" Task="xHit_01">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_01" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="1" Task="oHit_01">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_01" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="2" Task="blankHit_02">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_02" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="2" Task="xHit_02">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_02" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="0" column="2" Task="oHit_02">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_02" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="0" Task="blankHit_10">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_10" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="0" Task="xHit_10">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_10" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="0" Task="oHit_10">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_10" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="1" Task="blankHit_11">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_11" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="1" Task="xHit_11">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_11" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="1" Task="oHit_11">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_11" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="2" Task="blankHit_12">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_12" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="2" Task="xHit_12">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_12" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="1" column="2" Task="oHit_12">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_12" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="0" Task="blankHit_20">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_20" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="0" Task="xHit_20">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_20" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="0" Task="oHit_20">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_20" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="1" Task="blankHit_21">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_21" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="1" Task="xHit_21">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_21" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="1" Task="oHit_21">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_21" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="2" Task="blankHit_22">
+                    <Source>Demo\images\blank.jpg</Source>
+                    <Peekaboo ID="blank_22" Namespace="DemoTicTacToe" Default="Show"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="2" Task="xHit_22">
+                    <Source>Demo\images\x.jpg</Source>
+                    <Peekaboo ID="x_22" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+                <Widget File="Image\ImageScale.xml" row="2" column="2" Task="oHit_22">
+                    <Source>Demo\images\o.jpg</Source>
+                    <Peekaboo ID="o_22" Namespace="DemoTicTacToe" Default="Hide"/>     
+                </Widget>
+            </Grid>
+        </Grid>
+  
+        
+
+        <TaskList ID="blankHit_00">
+            <TaskItem Type="OtherTask" ID="HideBlank_00"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_00"/> 
+        </TaskList>
+        <TaskList ID="xHit_00">
+            <TaskItem Type="OtherTask" ID="HideX_00"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_00"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_00">
+            <TaskItem Type="OtherTask" ID="HideO_00"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_00"/> 
+        </TaskList>
+
+        <TaskList ID="blankHit_01">
+            <TaskItem Type="OtherTask" ID="HideBlank_01"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_01"/> 
+        </TaskList>
+        <TaskList ID="xHit_01">
+            <TaskItem Type="OtherTask" ID="HideX_01"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_01"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_01">
+            <TaskItem Type="OtherTask" ID="HideO_01"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_01"/> 
+        </TaskList>
+        <TaskList ID="blankHit_02">
+            <TaskItem Type="OtherTask" ID="HideBlank_02"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_02"/> 
+        </TaskList>
+        <TaskList ID="xHit_02">
+            <TaskItem Type="OtherTask" ID="HideX_02"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_02"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_02">
+            <TaskItem Type="OtherTask" ID="HideO_02"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_02"/> 
+        </TaskList>
+        <TaskList ID="blankHit_10">
+            <TaskItem Type="OtherTask" ID="HideBlank_10"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_10"/> 
+        </TaskList>
+        <TaskList ID="xHit_10">
+            <TaskItem Type="OtherTask" ID="HideX_10"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_10"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_10">
+            <TaskItem Type="OtherTask" ID="HideO_10"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_10"/> 
+        </TaskList>
+
+        <TaskList ID="blankHit_11">
+            <TaskItem Type="OtherTask" ID="HideBlank_11"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_11"/> 
+        </TaskList>
+        <TaskList ID="xHit_11">
+            <TaskItem Type="OtherTask" ID="HideX_11"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_11"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_11">
+            <TaskItem Type="OtherTask" ID="HideO_11"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_11"/> 
+        </TaskList>
+        <TaskList ID="blankHit_12">
+            <TaskItem Type="OtherTask" ID="HideBlank_12"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_12"/> 
+        </TaskList>
+        <TaskList ID="xHit_12">
+            <TaskItem Type="OtherTask" ID="HideX_12"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_12"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_12">
+            <TaskItem Type="OtherTask" ID="HideO_12"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_12"/> 
+        </TaskList>
+        <TaskList ID="blankHit_20">
+            <TaskItem Type="OtherTask" ID="HideBlank_20"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_20"/> 
+        </TaskList>
+        <TaskList ID="xHit_20">
+            <TaskItem Type="OtherTask" ID="HideX_20"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_20"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_20">
+            <TaskItem Type="OtherTask" ID="HideO_20"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_20"/> 
+        </TaskList>
+        <TaskList ID="blankHit_21">
+            <TaskItem Type="OtherTask" ID="HideBlank_21"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_21"/> 
+        </TaskList>
+        <TaskList ID="xHit_21">
+            <TaskItem Type="OtherTask" ID="HideX_21"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_21"/> 
+        </TaskList>
+        <TaskList ID="blankHit_22">
+            <TaskItem Type="OtherTask" ID="HideBlank_22"/> 
+            <TaskItem Type="OtherTask" ID="ShowX_22"/> 
+        </TaskList>
+        <TaskList ID="xHit_22">
+            <TaskItem Type="OtherTask" ID="HideX_22"/> 
+            <TaskItem Type="OtherTask" ID="ShowO_22"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_22">
+            <TaskItem Type="OtherTask" ID="HideO_22"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_22"/> 
+        </TaskList>
+    
+        <TaskList ID="oHit_21">
+            <TaskItem Type="OtherTask" ID="HideO_21"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_21"/> 
+        </TaskList>
+                
+        <TaskList ID = "HideBlank_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_00" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_00" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_00" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_00" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_00" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_00">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_00" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+    
+        <TaskList ID = "HideBlank_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_01" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_01" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_01" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_01" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_01" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_01">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_01" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+         
+        <TaskList ID = "HideBlank_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_02" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_02" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_02" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_02" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_02" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_02">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_02" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_10" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_10" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_10" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_10" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_10" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_10">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_10" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_11" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_11" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_11" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_11" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_11" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_11">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_11" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_12" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_12" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_12" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_12" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_12" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_12">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_12" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_20" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_20" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_20" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_20" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_20" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_20">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_20" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_21" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_21" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_21" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_21" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_21" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_21">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_21" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideBlank_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_22" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowBlank_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="blank_22" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideX_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_22" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowX_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="x_22" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "HideO_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_22" Namespace="DemoTicTacToe" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>    
+        <TaskList ID = "ShowO_22">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="o_22" Namespace="DemoTicTacToe" Data="Show"/> 
+            </TaskItem>
+        </TaskList>    
+    
+        <TaskList ID="ResetPressed">
+            <TaskItem Type="OtherTask" ID="ShowBlank_00"/> 
+            <TaskItem Type="OtherTask" ID="HideX_00"/> 
+            <TaskItem Type="OtherTask" ID="HideO_00"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_01"/> 
+            <TaskItem Type="OtherTask" ID="HideX_01"/> 
+            <TaskItem Type="OtherTask" ID="HideO_01"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_02"/> 
+            <TaskItem Type="OtherTask" ID="HideX_02"/> 
+            <TaskItem Type="OtherTask" ID="HideO_02"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_10"/> 
+            <TaskItem Type="OtherTask" ID="HideX_10"/> 
+            <TaskItem Type="OtherTask" ID="HideO_10"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_11"/> 
+            <TaskItem Type="OtherTask" ID="HideX_11"/> 
+            <TaskItem Type="OtherTask" ID="HideO_11"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_12"/> 
+            <TaskItem Type="OtherTask" ID="HideX_12"/> 
+            <TaskItem Type="OtherTask" ID="HideO_12"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_20"/> 
+            <TaskItem Type="OtherTask" ID="HideX_20"/> 
+            <TaskItem Type="OtherTask" ID="HideO_20"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_21"/> 
+            <TaskItem Type="OtherTask" ID="HideX_21"/> 
+            <TaskItem Type="OtherTask" ID="HideO_21"/> 
+            <TaskItem Type="OtherTask" ID="ShowBlank_22"/> 
+            <TaskItem Type="OtherTask" ID="HideX_22"/> 
+            <TaskItem Type="OtherTask" ID="HideO_22"/> 
+        
+        </TaskList>
+
+    </Tab>
+</MarvinExternalFile>

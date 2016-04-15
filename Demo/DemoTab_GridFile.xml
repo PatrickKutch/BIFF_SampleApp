@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarvinExternalFile>
+    <Grid>
+        <Widget File="Spacer.xml" row="0" column="0" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color1)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="0" column="1" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color2)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="0" column="2" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color3)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="1" column="2" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color1)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="1" column="0" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color2)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="2" column="1" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color1)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="2" column="2" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color2)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="2" column="0" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color3)</Item>
+            </StyleOverride>
+        </Widget>
+        <Widget File="Spacer.xml" row="1" column="1" Width="154" Height="154">
+            <StyleOverride>
+                <Item>-fx-background-color: $(Color3)</Item>
+            </StyleOverride>
+        </Widget>            
+    </Grid>
+</MarvinExternalFile>
