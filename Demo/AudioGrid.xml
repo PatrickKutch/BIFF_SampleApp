@@ -9,14 +9,13 @@
     </AliasList>
     <Grid>
         <Widget File="Media\AudioPlayer.xml" row="1" column="1">
-            <Audio Source="Demo\Media\01 - Heartbreaker.mp3" ID="Audio_1"/>
-            <Audio Source="Demo\Media\song.mp3" ID="Audio_2"/>
-            <Audio Source="Demo\Media\02 - We Live For Love.mp3" ID="Audio_3"/>
-            <Audio Source="Demo\Media\04 - Hell Is For Children.mp3" ID="Audio_4"/>
-            <Audio Source="Demo\Media\03 - Hit Me With Your Best Shot.mp3" ID="HitME"/>
+            <Audio Source="Demo\Media\Silly_Farts-Joe-1473367952.mp3" ID="Audio_1"/>
+            <Audio Source="Demo\Media\can you hear me now.mp3" ID="Audio_2"/>
+            <Audio Source="Demo\Media\toilet_flush_clear-mike-koenig.mp3" ID="Audio_3"/>
+            <Audio Source="Demo\Media\Evil_Laugh_1-Timothy-64737261.mp3" ID="Audio_4"/>
                         
             <Repeat Mode="LoopList">True</Repeat> 
-            <Initial ID="HitME"/>
+            <Initial ID="Audio_3"/>
             <AutoStart>False</AutoStart>
             <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
             <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
@@ -28,11 +27,10 @@
         <Title>Video Player</Title>
         <Message>Select which video to play</Message>
         <List>
-            <Item Text="Heartbreaker">Audio_1</Item>
-            <Item Text="Gloria Estafan">Audio_2</Item>
-            <Item Text="We Live for Love">Audio_3</Item>
-            <Item Text="Hell is for Children">Audio_4</Item>
-            <Item Text="Hit me with your best shot">HitMe</Item>
+            <Item Text="Musical Fruit">Audio_1</Item>
+            <Item Text="You there?">Audio_2</Item>
+            <Item Text="Down the Drain">Audio_3</Item>
+            <Item Text="Funny">Audio_4</Item>
         </List>
     </Prompt>
     
