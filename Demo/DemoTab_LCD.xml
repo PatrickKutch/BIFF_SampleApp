@@ -7,7 +7,7 @@
         <Title>Text Indicators</Title>
         <Widget File="Text\Text.xml" row="0" column="0" colSpan="3">
             <InitialValue>LCD Panels and Text</InitialValue>
-            <StyleOverride ID="Intel-title"/>
+            <StyleOverride ID="Title"/>
         </Widget>
         <Grid row="2" column="2" Align="Center" hgap="10" vgap="10">
             <Widget File="LCD\LCD.xml" row="1" column="2" Height="300" Width="650">
@@ -18,7 +18,7 @@
             </Widget>
 			<Widget File="Text\Text.xml" row="2" column="2">
 				<InitialValue> </InitialValue>
-				<StyleOverride ID="Intel-title"/>
+				<StyleOverride ID="Title"/>
 				<MinionSrc ID="TwiddleText" Namespace="DemoNamespace"/>
 			</Widget>
 			

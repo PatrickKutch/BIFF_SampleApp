@@ -6,7 +6,7 @@
     <Tab>
 	<Title>Flip It Example</Title>
 		<Widget File="Text\Text.xml" row="0" column="0" colSpan="2">
-			<StyleOverride ID="Intel-Bold-Italic-title-White"/>
+			<StyleOverride ID="Bold-Italic-title-White"/>
 			<MinionSrc ID="title-server2" Namespace="local"/>
 			<InitialValue>Flip It Demo</InitialValue>
 		</Widget>

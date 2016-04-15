@@ -4,11 +4,11 @@
         <Title>Media</Title>
         <Widget File="Text\Text.xml" row="1" column="0">
             <InitialValue>Video </InitialValue>
-            <StyleOverride ID="Intel-title"/>
+            <StyleOverride ID="Title"/>
         </Widget>
         <Widget File="Text\Text.xml" row="1" column="1">
             <InitialValue>Audio</InitialValue>
-            <StyleOverride ID="Intel-title"/>
+            <StyleOverride ID="Title"/>
         </Widget>
        <Grid File="Demo\VideoGrid.xml" row="2" column="0"/>
        <Grid File="Demo\AudioGrid.xml" row="2" column="1"/>

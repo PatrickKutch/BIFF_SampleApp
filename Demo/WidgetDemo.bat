@@ -1,3 +1,3 @@
 cd ..
-java -jar DemoFramework.jar -i demo\DemoApp.xml -vvvv
+java -jar Biff.Marvin.jar -i demo\DemoApp.xml -vvvv
 

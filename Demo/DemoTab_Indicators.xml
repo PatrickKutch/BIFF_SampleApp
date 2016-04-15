@@ -7,7 +7,7 @@
 		<Title>Indicators</Title>
 		<Widget File="Text\Text.xml" row="0" column="0" Align="Center">
 			<InitialValue> Various Indicator and Progress Widgets</InitialValue>
-			<StyleOverride ID="Intel-title"/>
+			<StyleOverride ID="Title"/>
 		</Widget>
 		<Grid row="1" column="0" Align="Center">
 			<Widget File="Indicator\ProgressBar.xml" row="1" column="1" Width="800" Height="40" colSpan="2">
