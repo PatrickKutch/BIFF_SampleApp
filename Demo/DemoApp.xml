@@ -27,7 +27,7 @@
         <Network Port="5200"/> 
         <Title>Bitchin Instrumentation Framework (BIFF) Demo</Title>
         <Padding top="2" bottom="2" right="2" left="2"/>
-        <StyleSheet>Widget/Modena-BIFF.css</StyleSheet> 
+        <StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
 
         <Heartbeat Rate="10"/>
 

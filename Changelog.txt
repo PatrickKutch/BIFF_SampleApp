@@ -1,0 +1,103 @@
+Beta 1.40
+Added BarGauge and DoubleBarGauge
+Added Simple Sample App
+
+Beta 1.39
+Added ability to dynamically change some visual parts of a widgets, such as style and title
+
+Beta 1.38
+Bug fixes
+Added ability to fire off a task when a DynamicGrid Grid is activated
+Added ability to fire off a task during media playback at specific millisecond location, a percentage or 'start' or 'end' of media plays
+Added EnableScrollBars flag in Config file.
+
+Beta 1.37
+Fixed issue with RemoteMarvinTasks, and made it so BROADCAST is valid MarvinID
+Added <ExludeList> to QuickView widgets
+Added ability for dynamic Images to automatically rotate
+
+Beta 1.36 
+Fixed issue where message was not sent down to all Minions to do a refersh of data
+
+Beta 1.35
+Few minor fixes
+Added <Repeat> ability, to make loops when creating widgets
+Added scrollbars!
+Added QuickViewLDC Widget
+Added the # of datapoints registered to the about box
+Added <DefaultValue> for LCD
+QuickViewWidget and QuickViewLCD support hgap and vgap
+Added Aliases for CurrentRowAlias,CurrentColumnAlias,NextRowAlias and NextColumnAlias
+Added -Aliasfile to help info
+
+Beta 1.34
+Added QuickViewWidget
+
+Beta 1.33
+Added ability to configure if and how unregisted datapoints are displayed using the <UnregisteredData> tag.
+Bug Fixes
+
+Beta 1.32
+-vvvv option reports memory usage via log periodically
+
+Beta 1.31:
+Added abiltiy to specify external alias file for every <AliasList>.  Same as Minion: <AliasList File="foo.txt">
+
+Beta 1.30:
+Added Grouped datasets.  See <Group> for Minion.
+
+Beta 1.26:
+Added Web widget!
+
+Beta 1.25:
+Bug Fixes
+
+Beta 1.24:
+Significant underlying message changes, not backward compatible with older versions of Grimlock.
+Added ID to config file. ID's now used for remote marvin tasks.  RemoteMarvinAdminTask renamed to RemoteMarvinTask
+About Box shows app ID
+
+Beta 1.23:
+Made changes to get Marvin to work with Linux.  Tested with Ubuntu.
+
+Beta 1.22:
+Added <ValueRange> override for most widgets
+You can now specify a Widget definition file that is not in the 'Widget' sub directory.  Still need the .css to accompany the widget def file.
+Tweaked scaling more - (still small issues when tabs are aligned along bottom)
+
+
+Beta 1.21:
+Got scaling to work correctly for everything - finally 
+added -dumpwidgetinfo command line parameter to log all widget info
+in debug mode if you press shift+left mouse button, will log info about widgets at the given location
+
+Beta 1.20:
+Added DynamicGrid
+For DynamicImage,VideoPlayer,AudioPlayer and DynamicGrid, now accept 'Next' and 'Previous' data
+Auto scaling now works if you specify Height and Width for the App itself
+changes to FlipPanel
+	Can specify which direction to flip for a specific flip
+	can now specify front,back or just flip, with optional :direction suffix
+	
+Beta 1.11:
+Added Postpone ability to Tasks
+Can specify log filename
+TabID alias automatically generated
+Fixes:
+	Spacer widget was not scaling correctly
+
+Beta 1.10
+New Widgets:
+	SteelRadial	 - From Open Source project
+	SteelRadialSteel - From Open Source Project (I know, bad name)
+	VideoPlayer
+	AudioPlayer
+
+Ability to prompt for input via either a specified list or an input box.
+Can specify external alias file
+<RefreshInterval> application setting added
+<Peekaboo> added to grids
+<Peekaboo> now suports 'Pause' and 'Resume' strings to pause updates.  Most widgets support this
+Abiltiy to attempt to automatically scale based upon <CreationSize> application setting
+New MarvinAdminTask - can hide/show tabs
+More complete library of widgets

@@ -1,0 +1,71 @@
+/* 
+    Document   : nothing yet
+*/
+
+/*******************************************************************************
+ *                                                                             *
+ * Charts                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart {
+    -fx-padding: 5px;
+}
+.chart-plot-background {
+    -fx-background-color: derive(-fx-background,25%);
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-font-size: 1.2em;
+}
+.chart-legend {
+   -fx-background-color: -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-background, -10%), derive(-fx-background, -5%)),
+        linear-gradient(from 0px 0px to 0px 4px, derive(-fx-background, -4%), derive(-fx-background, 10%));
+   -fx-background-insets: 0 0 -1 0, 0,1;
+   -fx-background-radius: 4,4,3;
+   -fx-padding: 6px;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ChartPlot                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-vertical-grid-lines {
+    -fx-stroke: null;
+    -fx-stroke-dash-array: null;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: derive(-fx-background,90%);
+    -fx-stroke-dash-array: 0.25em, 0.25em;
+}
+.chart-alternative-column-fill {
+    -fx-fill: null;
+    -fx-stroke: null;
+}
+.chart-alternative-row-fill {
+    -fx-fill: null;
+    -fx-stroke: null;
+}
+.chart-vertical-zero-line {
+    -fx-stroke: derive(-fx-text-background-color, 60%);
+}
+.chart-horizontal-zero-line {
+    -fx-stroke: derive(-fx-text-background-color, 60%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Axis                                                                        *
+ *                                                                             *
+ ******************************************************************************/
+
+.axis {
+    AXIS_COLOR: derive(-fx-background,-20%);
+    -fx-tick-label-font-size: .8em; /* 16px */
+    -fx-tick-label-fill: derive(-fx-text-background-color, 60%);
+	}
