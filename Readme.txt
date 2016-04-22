@@ -17,4 +17,5 @@
 
 Sample app that showcases many of the features.  Download Oscar, Minion and Marvin.
 Compile Marvin an put the resulting .JAR file into the same directory as this readme.
-Run Minion, Oscar and Marvin and enjoy.
+Run Minion, Oscar and Marvin and enjoy.  The default .bat files for these will run a
+sample workload.

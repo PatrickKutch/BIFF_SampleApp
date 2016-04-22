@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DemoFramework>
+<Marvin>
 <!--
 ##############################################################################
 #  Copyright (c) 2016 by Patrick Kutch https://github.com/PatrickKutch
@@ -70,13 +70,13 @@
             <Tab ID="DemoTab-MoreDials"/>            
             <Tab ID="DemoTab-Indicators"/>            
             <Tab ID="DemoTab-LCD"/>            
-            <Tab ID="DemoTab-Charts"/>	 
+ -          <Tab ID="DemoTab-Charts"/>	 
             <Tab ID="DemoTab-Charts2"/>	 
             <Tab ID="DemoTab-QuickView"/>
             <Tab ID="DemoTab-Images"/>
             <Tab ID="DemoTab-Media"/>
             <Tab ID="DemoTab-Grids"/>
-            <Tab ID="DemoTab-Demo"/>           
+            <Tab ID="DemoTab-Demo"/>            
         </Tabs>
     </Application>
     <!-- This is where you define the tabs -->
@@ -140,4 +140,4 @@
             <Task ID="SetTabVisibility" Data="DemoTab-LCD:True"/> 
         </TaskItem>
     </TaskList>
-</DemoFramework>
+</Marvin>
