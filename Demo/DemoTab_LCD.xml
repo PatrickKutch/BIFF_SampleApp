@@ -30,15 +30,15 @@
         <Grid row="2" column="2" Align="Center" hgap="10" vgap="10">
             <Widget File="LCD\LCD.xml" row="1" column="2" Height="300" Width="650">
                 <MinionSrc ID="CPU" Namespace="DemoNamespace"/>
-				<Peekaboo ID="LCD.Override" Namespace="DemoNamespace"/>     
+                <Peekaboo ID="LCD.Override" Namespace="DemoNamespace"/>     
                 <UnitsOverride>%</UnitsOverride>
                 <Title>CPU 0</Title>
             </Widget>
-			<Widget File="Text\Text.xml" row="2" column="2">
-				<InitialValue> </InitialValue>
-				<StyleOverride ID="Title"/>
-				<MinionSrc ID="TwiddleText" Namespace="DemoNamespace"/>
-			</Widget>
+            <Widget File="Text\Text.xml" row="2" column="2">
+                <InitialValue> </InitialValue>
+                <StyleOverride ID="Title"/>
+                <MinionSrc ID="TwiddleText" Namespace="DemoNamespace"/>
+            </Widget>
 			
             <Widget File="LCD\LCD.xml" row="1" column="1" Height="250" Width="420">
                 <MinionSrc ID="StackedTx_Server1" Namespace="DemoNamespace"/>
@@ -62,22 +62,22 @@
                 <InitialValue>0</InitialValue>
                 <MinionSrc ID="StackedRx_Server1" Namespace="DemoNamespace"/>
             </Widget>
-			<Widget File="Text\Text.xml" row="$(NextRowAlias)" column="1" colSpan="3" Task="ChangeTextTask">
+            <Widget File="Text\Text.xml" row="$(NextRowAlias)" column="1" colSpan="3" Task="ChangeTextTask">
                 <MinionSrc ID="FromFile" Namespace="DemoNamespace"/>
-				<InitialValue>Comes from File</InitialValue>
-			</Widget>
-			<Widget File="Text\Text.xml" row="$(NextRowAlias)" column="1" colSpan="3">
+                <InitialValue>Comes from File</InitialValue>
+            </Widget>
+            <Widget File="Text\Text.xml" row="$(NextRowAlias)" column="1" colSpan="3">
                 <InitialValue>Click The Text Above to Change</InitialValue>
-				<StyleOverride ID="Awesome-Mix"/>
-			</Widget>
+                <StyleOverride ID="Awesome-Mix"/>
+            </Widget>
         </Grid>
     
-		<Conditional Type="IF_GT">  #Example of if/then/else logic
-			<MinionSrc ID="CPU" Namespace="DemoNamespace"/>
-			<Value>75</Value>
-			<Then>greaterTask</Then>
-			<Else>lessTask</Else>
-		</Conditional>
+        <Conditional Type="IF_GT">  #Example of if/then/else logic
+            <MinionSrc ID="CPU" Namespace="DemoNamespace"/>
+            <Value>75</Value>
+            <Then>greaterTask</Then>
+            <Else>lessTask</Else>
+        </Conditional>
 		
         <TaskList ID="greaterTask">
             <TaskItem Type="Marvin"> 
@@ -93,12 +93,12 @@
         <TaskList ID="ChangeTextTask">
             <TaskItem Type="Minion"> 
                 <Actor ID="SimpleActor" Namespace="DemoNamespace"/> 
-				<Param>@NewTextPrompt</Param>
+                <Param>@NewTextPrompt</Param>
             </TaskItem>
         </TaskList>
-		<Prompt ID="NewTextPrompt" Type="InputBox">
-			<Title>User Prompt</Title>
-			<Message>Type in new text</Message>
-		</Prompt>
+        <Prompt ID="NewTextPrompt" Type="InputBox">
+            <Title>User Prompt</Title>
+            <Message>Type in new text</Message>
+        </Prompt>
     </Tab>
 </MarvinExternalFile>
