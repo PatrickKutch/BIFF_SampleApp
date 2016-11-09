@@ -93,13 +93,14 @@ is being used to size a border should also be in pixels.
     /* A light grey that is the base color for objects.  Instead of using
      * -fx-base directly, the sections in this file will typically use -fx-color.
      */
-    -fx-base: #00664c;
+    
+	-fx-base: #00664c;
 
     /* A very light grey used for the background of windows.  See also
      * -fx-text-background-color, which should be used as the -fx-text-fill
      * value for text painted on top of backgrounds colored with -fx-background.
      */
-    -fx-background: derive(-fx-base,26.4%);
+    -fx-background: derive(-fx-base,25%);
 
     /* Used for the inside of text boxes, password boxes, lists, trees, and
      * tables.  See also -fx-text-inner-color, which should be used as the
@@ -219,16 +220,6 @@ is being used to size a border should also be in pixels.
      */
     -fx-pressed-base: derive(-fx-base,-6%);
 
-    /* The color to use for -fx-text-fill when text is to be painted on top of
-     * a background filled with the -fx-background color.
-     */
-    -fx-text-background-color: ladder(
-        -fx-background,
-        -fx-light-text-color 45%,
-        -fx-dark-text-color  46%,
-        -fx-dark-text-color  59%,
-        -fx-mid-text-color   60%
-    );
 
     /* A little darker than -fx-color and used to draw boxes around objects such
      * as progress bars, scroll bars, scroll panes, trees, tables, and lists.
@@ -309,6 +300,17 @@ is being used to size a border should also be in pixels.
     -fx-body-color-bottomup: linear-gradient(to top, derive(-fx-color,10%) ,derive(-fx-color,-6%));
     -fx-body-color-to-right: linear-gradient(to right, derive(-fx-color,10%) ,derive(-fx-color,-6%));
 
+    /* The color to use for -fx-text-fill when text is to be painted on top of
+     * a background filled with the -fx-background color.
+     */
+    -fx-text-background-color: ladder(
+        -fx-color,
+        -fx-light-text-color 45%,
+        -fx-dark-text-color  46%,
+        -fx-dark-text-color  59%,
+        -fx-mid-text-color   60%
+    );	
+	
     /* The color to use as -fx-text-fill when painting text on top of
      * backgrounds filled with -fx-base, -fx-color, and -fx-body-color.
      */

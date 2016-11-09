@@ -9,16 +9,17 @@
  ******************************************************************************/
 
 .chart {
-    -fx-padding: 2px;
+    -fx-padding: 5px;
 }
 .chart-plot-background {
-    -fx-background-color: derive(-fx-background,25%);
+    -fx-background-color: -fx-background;
 }
 .chart-content {
-    -fx-padding: 5px;
+    -fx-padding: 10px;
 }
 .chart-title {
     -fx-font-size: 1.2em;
+    -fx-text-fill: -fx-text-background-color;
 }
 .chart-legend {
    -fx-background-color: -fx-shadow-highlight-color,
@@ -40,7 +41,7 @@
     -fx-stroke-dash-array: null;
 }
 .chart-horizontal-grid-lines {
-    -fx-stroke: derive(-fx-background,90%);
+    -fx-stroke: -fx-control-inner-background;
     -fx-stroke-dash-array: 0.25em, 0.25em;
 }
 .chart-alternative-column-fill {
@@ -52,10 +53,10 @@
     -fx-stroke: null;
 }
 .chart-vertical-zero-line {
-    -fx-stroke: derive(-fx-text-background-color, 60%);
+    -fx-stroke: -fx-control-inner-background;
 }
 .chart-horizontal-zero-line {
-    -fx-stroke: derive(-fx-text-background-color, 60%);
+    -fx-stroke: -fx-control-inner-background;
 }
 
 /*******************************************************************************
@@ -65,9 +66,9 @@
  ******************************************************************************/
 
 .axis {
-    AXIS_COLOR: derive(-fx-background,-20%);
+    AXIS_COLOR: -fx-control-inner-background;
     -fx-tick-label-font-size: .6em; /* 16px */
-    -fx-tick-label-fill: derive(-fx-text-background-color, 60%);
+    -fx-tick-label-fill: -fx-text-background-color;
 	}
 
 .default-color0.chart-bar { -fx-bar-fill: CHART_COLOR_1;
@@ -75,7 +76,7 @@
 										rgb(0,200,0) 0%,
 										rgb(0,255,64) 75%,
                                         rgb(128,255,64) 85%,
-										rgb(255,255,0) 95%,
-                                        rgb(255,0,0) 100%
+										rgb(255,204,102) 95%,
+                                        rgb(255,51,00) 100%
                               );
-   }
+   }	

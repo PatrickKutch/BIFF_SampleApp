@@ -139,7 +139,7 @@
         </Grid> 
         <Grid row="1" column="1"> <!-- Tic Tac Toe Grid -->
             <Widget File="Text\Text.xml" row="0" column="1">
-                <StyleOverride ID="$(DownloadFont)"/>
+                <StyleOverride ID="Download-title"/>
                 <InitialValue>Play Tic-Tac-Toe!</InitialValue>
             </Widget>
             <Widget File="Button\Button.xml" row="2" column="1"  Task="ResetPressed">

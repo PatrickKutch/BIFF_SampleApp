@@ -21,11 +21,11 @@
 -->
 
 <MarvinExternalFile>
-    <Tab>
-		<AliasList>
-			<Alias DialWidth="280"/> 	
-		</AliasList>
+        <AliasList>
+            <Alias DialWidth="280"/> 	
+        </AliasList>
 		
+    <Tab>
         <Title>Dials</Title>
         <Widget File="Demo\DemoWidgets\Gauge10GbE.xml" row="1" column="1" Width="$(DialWidth)">
             <Title>Throughput</Title>
@@ -54,7 +54,7 @@
         <Widget File="Demo\DemoWidgets\Gauge10GbE_test.xml" row="2" column="1"  Width="$(DialWidth)">
             <Title>Throughput</Title>
             <!-- <StyleOverride File="demo1.css"/> -->
-         <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
             <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
         </Widget>
         <Widget File="Demo\DemoWidgets\10GigSimpleGauge.xml" row="2" column="2"  Width="$(DialWidth)">
@@ -78,7 +78,7 @@
         <Widget File="Demo\DemoWidgets\GaugeRadialSteel.xml" row="2" column="5"  Width="$(DialWidth)">
             <Title>Throughput</Title>
             <StyleOverride>
-            	<Item>-body: black; -tick-mark-fill: white; -tick-label-fill: white</Item>
+                <Item>-body: black; -tick-mark-fill: white; -tick-label-fill: white</Item>
             </StyleOverride>
             <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
             <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
