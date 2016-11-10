@@ -22,6 +22,7 @@
 
 <Widget Type = "DoubleBarGauge">
     <Style>GaugeDoubleBar.css</Style>
+	<Decimals>2</Decimals>
     <MinValue>0</MinValue>
     <MaxValue>100</MaxValue>
 </Widget>

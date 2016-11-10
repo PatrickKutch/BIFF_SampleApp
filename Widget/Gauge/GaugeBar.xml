@@ -23,6 +23,7 @@
 
 <Widget Type = "BarGauge">
     <Style>GaugeBar.css</Style>
+	<Decimals>2</Decimals>
     <MinValue>0</MinValue>
     <MaxValue>100</MaxValue>
     <UnitText>Unit Text</UnitText>
