@@ -129,7 +129,7 @@
             <Widget File="Spacer.xml" row="0" column="4" width="10"/>
             <Grid File="Demo\DemoTab_GridFile.xml" row="0" column="5" hgap="0" vgap="0" rowSpan="3" Align="Center" Color1="goldenrod" Color2="purple" Color3="green"/> 
         
-            <Widget File="Text\Text.xml" row="1" column="0" colSpan="3">
+            <Widget File="Text\Text.xml" row="1" column="0" colSpan="3" rowspan="3">
                 <InitialValue>Grids Within Grids</InitialValue>
                 <StyleOverride>
                     <Item>-fx-rotate:-45</Item>
@@ -683,7 +683,6 @@
             <TaskItem Type="OtherTask" ID="ShowBlank_22"/> 
             <TaskItem Type="OtherTask" ID="HideX_22"/> 
             <TaskItem Type="OtherTask" ID="HideO_22"/> 
-        
         </TaskList>
 
     </Tab>
