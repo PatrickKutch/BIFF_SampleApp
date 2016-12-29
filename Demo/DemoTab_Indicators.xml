@@ -52,6 +52,8 @@
 				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
 			</Widget>
 		</Grid>
-
 	</Tab>
+    <AliasList>
+		<Alias DEBUG_STYLE="-fx-border-color:yellow;-fx-border-style: dotted"/>
+	</AliasList>
 </MarvinExternalFile>

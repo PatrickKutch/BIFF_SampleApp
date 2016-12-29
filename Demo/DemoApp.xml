@@ -22,7 +22,7 @@
 #
 ##############################################################################
 -->
-    <Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto">
+    <Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto" MarvinLocalData="enabled">
         <CreationSize Width="1680" Height="1016"/>
         <Network Port="5200"/> 
         <Title>Bitchin Instrumentation Framework (BIFF) Demo</Title>
