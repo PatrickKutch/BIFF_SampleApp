@@ -24,7 +24,6 @@
 <Widget Type = "LineChart">    
     <Style>ChartLine.css</Style>
     <Animated>False</Animated>
-    <Synchronized MaxSyncWait="0">True</Synchronized>
     <yAxis MajorTickInterval="10" MinorTickInterval="0" TickLabelVisible="True"/>
     <xAxis MajorTickInterval="1" MinorTickInterval="0" TickLabelVisible="False"/>
 </Widget>

@@ -3,7 +3,7 @@
 <Marvin>
 <!--
 ##############################################################################
-#  Copyright (c) 2016 by Patrick Kutch https://github.com/PatrickKutch
+#  Copyright (c) 2016-2017 by Patrick Kutch https://github.com/PatrickKutch
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -22,122 +22,127 @@
 #
 ##############################################################################
 -->
-    <Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto" MarvinLocalData="enabled">
-        <CreationSize Width="1680" Height="1016"/>
-        <Network Port="5200"/> 
-        <Title>Bitchin Instrumentation Framework (BIFF) Demo</Title>
-        <Padding top="2" bottom="2" right="2" left="2"/>
-        <StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
+	<Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto" MarvinLocalData="enabled">
+		<CreationSize Width="1680" Height="1016"/>
+		<Network Port="5200"/> 
+		<Title>BIFF Instrumenation Framework Demo - $(DemoVersion)</Title>
+		<Padding top="2" bottom="2" right="2" left="2"/>
+		<StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
 
-        <Heartbeat Rate="10"/>
+		<Heartbeat Rate="10"/>
 
-        <UnregisteredData Width="5" Enabled="True" >
-            <TitleStyle>-fx-font-size: 3.5em;</TitleStyle>
-            <EvenStyle>
-                <Background>-fx-background-color:green</Background>
-                <ID>-fx-font-size: 1.0em;</ID>
-                <Value>-fx-font-size: .9em;-fx-text-fill:yellow</Value>
-            </EvenStyle>
-            <OddStyle>
-                <Background>-fx-background-color:grey</Background>
-                <ID>-fx-font-size: 1.0em;-fx-text-fill:black</ID>
-                <Value>-fx-font-size: .9em;-fx-text-fill:yellow</Value>
-            </OddStyle>
-        </UnregisteredData>
+		<UnregisteredData Width="5" Enabled="True" >
+			<TitleStyle>-fx-font-size: 3.5em;</TitleStyle>
+			<EvenStyle>
+				<Background>-fx-background-color:green</Background>
+				<ID>-fx-font-size: 1.0em;</ID>
+				<Value>-fx-font-size: .9em;-fx-text-fill:yellow</Value>
+			</EvenStyle>
+			<OddStyle>
+				<Background>-fx-background-color:grey</Background>
+				<ID>-fx-font-size: 1.0em;-fx-text-fill:black</ID>
+				<Value>-fx-font-size: .9em;-fx-text-fill:yellow</Value>
+			</OddStyle>
+		</UnregisteredData>
 
-        <MainMenu Show="True"> <!-- True or False Global show or hide menu but Tasks on Widgets still work if Global Tasks are enabled -->
-            <Menu Title="Test">
-                <MenuItem Text="Click Me via Menu" Task="ShowHiddenDials"/> <!-- Task defined in Dials tab, take a look!-->
-                <MenuItem Text="Pause" Task="PauseDials"/>
-                <MenuItem Text="Resume" Task="ResumeDials"/>
-            </Menu>
-            <Menu Title="View">
-                <MenuItem Text="Audio Control" Task="ShowAudioControl"/>
-                <MenuItem Text="Video Control" Task="ShowVideoControl"/>
+		<MainMenu Show="True">
+			<!-- True or False Global show or hide menu but Tasks on Widgets still work if Global Tasks are enabled -->
+			<Menu Title="Test">
+				<MenuItem Text="Click Me via Menu" Task="ShowHiddenDials"/>
+				<!-- Task defined in Dials tab, take a look!-->
+				<MenuItem Text="Pause" Task="PauseDials"/>
+				<MenuItem Text="Resume" Task="ResumeDials"/>
+			</Menu>
+			<Menu Title="View">
+				<MenuItem Text="Audio Control" Task="ShowAudioControl"/>
+				<MenuItem Text="Video Control" Task="ShowVideoControl"/>
 
-                <MenuItem Text="Hide Charts1 Tab" Task="Hide Charts1Tab"/>
-                <MenuItem Text="Show Charts1 Tab" Task="Show Charts1Tab "/>
+				<MenuItem Text="Hide Charts1 Tab" Task="Hide Charts1Tab"/>
+				<MenuItem Text="Show Charts1 Tab" Task="Show Charts1Tab "/>
 
-                <MenuItem Text="Hide Charts2 Tab" Task="Hide Charts2Tab"/>
-                <MenuItem Text="Show Charts2 Tab" Task="Show Charts2Tab"/>
+				<MenuItem Text="Hide Charts2 Tab" Task="Hide Charts2Tab"/>
+				<MenuItem Text="Show Charts2 Tab" Task="Show Charts2Tab"/>
 
-                <MenuItem Text="Hide Text Tab" Task="Hide TextTab"/>
-                <MenuItem Text="Show Text Tab" Task="Show TextTab"/>
-            </Menu>
-        </MainMenu>
-        <Tabs>  <!-- Declare which tabs and in what order -->
-            <Tab ID="DemoTab-Dials"/>            
-            <Tab ID="DemoTab-MoreDials"/>            
-            <Tab ID="DemoTab-Indicators"/>            
-            <Tab ID="DemoTab-LCD"/>            
+				<MenuItem Text="Hide Text Tab" Task="Hide TextTab"/>
+				<MenuItem Text="Show Text Tab" Task="Show TextTab"/>
+			</Menu>
+		</MainMenu>
+		<Tabs>
+			<!-- Declare which tabs and in what order -->
+			<Tab ID="DemoTab-Dials"/>            
+			<Tab ID="DemoTab-MoreDials"/>            
+			<Tab ID="DemoTab-Indicators"/>            
+			<Tab ID="DemoTab-LCD"/>            
  -          <Tab ID="DemoTab-Charts"/>	 
-            <Tab ID="DemoTab-Charts2"/>	 
-            <Tab ID="DemoTab-QuickView"/>
-            <Tab ID="DemoTab-Images"/>
-            <Tab ID="DemoTab-Media"/>
-            <Tab ID="DemoTab-Grids"/>
-            <Tab ID="DemoTab-Demo"/>            
-        </Tabs>
-    </Application>
-    <!-- This is where you define the tabs -->
-    <Tab ID="DemoTab-Charts" Align="Center" File="Demo\DemoTab_Graphs.xml"/>
-    <Tab ID="DemoTab-Charts2" Align="Center" File="Demo\DemoTab_Graphs2.xml"/>
-    <Tab ID="DemoTab-Grids" Align="Center" File="Demo\DemoTab_Grids.xml" Color3="blue"/>
-    <Tab ID="DemoTab-Images" Align="Center" File="Demo\DemoTab_Images.xml"/>
-    <Tab ID="DemoTab-Dials" Align="Center" File="Demo\DemoTab_Dials.xml" hgap="5" vgap="5"/>    
-    <Tab ID="DemoTab-MoreDials" Align="Center" File="Demo\DemoTab_Dials2.xml" hgap="5" vgap="5"/>    
-    <Tab ID="DemoTab-Indicators" Align="Center" File="Demo\DemoTab_Indicators.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-LCD" Align="Center" File="Demo\DemoTab_LCD.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-Demo" Align="Center" File="Demo\DemoTab_Demo.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-Media" Align="Center" File="Demo\DemoTab_Media.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-QuickView" Align="Center" File="Demo\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
+			<Tab ID="DemoTab-Charts2"/>	 
+			<Tab ID="DemoTab-QuickView"/>
+			<Tab ID="DemoTab-Images"/>
+			<Tab ID="DemoTab-Media"/>
+			<Tab ID="DemoTab-Grids"/>
+			<Tab ID="DemoTab-Demo"/>            
+		</Tabs>
+	</Application>
 
-    <!-- Global Alias List -->	
-    <AliasList>
-        <Alias OscarID="OscarDemo"/>
-    </AliasList>		
+	<!-- This is where you define the tabs -->
+	<Tab ID="DemoTab-Charts" Align="Center" File="Demo\DemoTab_Graphs.xml"/>
+	<Tab ID="DemoTab-Charts2" Align="Center" File="Demo\DemoTab_Graphs2.xml"/>
+	<Tab ID="DemoTab-Grids" Align="Center" File="Demo\DemoTab_Grids.xml" Color3="blue"/>
+	<Tab ID="DemoTab-Images" Align="Center" File="Demo\DemoTab_Images.xml"/>
+	<Tab ID="DemoTab-Dials" Align="Center" File="Demo\DemoTab_Dials.xml" hgap="5" vgap="5"/>    
+	<Tab ID="DemoTab-MoreDials" Align="Center" File="Demo\DemoTab_Dials2.xml" hgap="5" vgap="5"/>    
+	<Tab ID="DemoTab-Indicators" Align="Center" File="Demo\DemoTab_Indicators.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-LCD" Align="Center" File="Demo\DemoTab_LCD.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-Demo" Align="Center" File="Demo\DemoTab_Demo.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-Media" Align="Center" File="Demo\DemoTab_Media.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-QuickView" Align="Center" File="Demo\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
 
-    <!-- Task Definition Section -->
+	<!-- Global Alias List -->	
+	<AliasList>
+		<Alias OscarID="OscarDemo"/>
+		<Alias DemoVersion="17.04.16"/>
+	</AliasList>		
 
-    <!-- Marvin Control Tasks -->
-    <TaskList ID="Startup" PerformOnStartup="True">
-        <TaskItem Type="OtherTask" ID="GoLive" Postpone="15000"/>
-    </TaskList>
+	<!-- Task Definition Section -->
 
-    <TaskList ID="Start.Traffic.1" >
-        <TaskItem Type="OtherTask" ID="File1Chose"/>
-        <TaskItem Type="OtherTask" ID="Flipit" Postpone="500"/>
-        <TaskItem Type="OtherTask" ID="PlayButtonPressed" Postpone="1000"/>
-    </TaskList>	
+	<!-- Marvin Control Tasks -->
+	<TaskList ID="Startup" PerformOnStartup="True">
+		<TaskItem Type="OtherTask" ID="GoLive" Postpone="15000"/>
+	</TaskList>
 
-    <TaskList ID="Hide Charts1Tab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-Charts:False"/> 
-        </TaskItem>
-    </TaskList>
-    <TaskList ID="Show Charts1Tab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-Charts:True"/> 
-        </TaskItem>
-    </TaskList>
-    <TaskList ID="Hide Charts2Tab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-Charts2:False"/> 
-        </TaskItem>
-    </TaskList>
-    <TaskList ID="Show Charts2Tab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-Charts2:True"/> 
-        </TaskItem>
-    </TaskList>
-    <TaskList ID="Hide TextTab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-LCD:False"/> 
-        </TaskItem>
-    </TaskList>
-    <TaskList ID="Show TextTab">
-        <TaskItem Type="MarvinAdmin">
-            <Task ID="SetTabVisibility" Data="DemoTab-LCD:True"/> 
-        </TaskItem>
-    </TaskList>
+	<TaskList ID="Start.Traffic.1" >
+		<TaskItem Type="OtherTask" ID="File1Chose"/>
+		<TaskItem Type="OtherTask" ID="Flipit" Postpone="500"/>
+		<TaskItem Type="OtherTask" ID="PlayButtonPressed" Postpone="1000"/>
+	</TaskList>	
+
+	<TaskList ID="Hide Charts1Tab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-Charts:False"/> 
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="Show Charts1Tab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-Charts:True"/> 
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="Hide Charts2Tab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-Charts2:False"/> 
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="Show Charts2Tab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-Charts2:True"/> 
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="Hide TextTab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-LCD:False"/> 
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="Show TextTab">
+		<TaskItem Type="MarvinAdmin">
+			<Task ID="SetTabVisibility" Data="DemoTab-LCD:True"/> 
+		</TaskItem>
+	</TaskList>
 </Marvin>
