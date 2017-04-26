@@ -30,6 +30,7 @@
 		<StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
 
 		<Heartbeat Rate="10"/>
+		<IgnoreWebCerts>True</IgnoreWebCerts> <!-- for Web Widget -->
 
 		<UnregisteredData Width="5" Enabled="True" >
 			<TitleStyle>-fx-font-size: 3.5em;</TitleStyle>
@@ -69,16 +70,18 @@
 		</MainMenu>
 		<Tabs>
 			<!-- Declare which tabs and in what order -->
+			<Tab ID="Welcome"/>            
 			<Tab ID="DemoTab-Dials"/>            
 			<Tab ID="DemoTab-MoreDials"/>            
 			<Tab ID="DemoTab-Indicators"/>            
 			<Tab ID="DemoTab-LCD"/>            
- -          <Tab ID="DemoTab-Charts"/>	 
+            <Tab ID="DemoTab-Charts"/>	 
 			<Tab ID="DemoTab-Charts2"/>	 
-			<Tab ID="DemoTab-QuickView"/>
 			<Tab ID="DemoTab-Images"/>
 			<Tab ID="DemoTab-Media"/>
+			<Tab ID="DemoTab-HTML"/>
 			<Tab ID="DemoTab-Grids"/>
+			<Tab ID="DemoTab-QuickView"/>
 			<Tab ID="DemoTab-Demo"/>            
 		</Tabs>
 	</Application>
@@ -95,11 +98,19 @@
 	<Tab ID="DemoTab-Demo" Align="Center" File="Demo\DemoTab_Demo.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-Media" Align="Center" File="Demo\DemoTab_Media.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-QuickView" Align="Center" File="Demo\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-HTML" Align="Center" File="Demo\DemoTab_HTML.xml" hgap="10" vgap="10"/>    
+	
+	<Tab ID="Welcome" Align="Center">
+		<Title>Welcome</Title>
+        <Widget File="Image\ImageScale.xml" row="1" column="1"  Width="1000">
+            <Source>Demo\images\logo.png</Source>
+        </Widget>
+	</Tab>
 
 	<!-- Global Alias List -->	
 	<AliasList>
 		<Alias OscarID="OscarDemo"/>
-		<Alias DemoVersion="17.04.16"/>
+		<Alias DemoVersion="17.04.26"/>
 	</AliasList>		
 
 	<!-- Task Definition Section -->
