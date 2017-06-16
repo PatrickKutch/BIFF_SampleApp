@@ -110,7 +110,7 @@
 	<!-- Global Alias List -->	
 	<AliasList>
 		<Alias OscarID="OscarDemo"/>
-		<Alias DemoVersion="17.04.26"/>
+		<Alias DemoVersion="17.06.16"/>
 	</AliasList>		
 
 	<!-- Task Definition Section -->

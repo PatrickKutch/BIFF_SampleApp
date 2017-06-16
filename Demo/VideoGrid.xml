@@ -29,10 +29,10 @@
     </AliasList>
     <Grid>
         <Widget File="Media\VideoPlayer.xml" row="1" column="0" Align="Center" Width="1000">
-            <Video Source="Demo\Media\Blame the Cat.mp4" ID="Video_1"/>
-            <Video Source="Demo\Media\Sintel.mp4" ID="Video_2"/>
-            <Video Source="Demo\Media\20051210-w50s.flv" ID="Video_3"/>
-            <Initial ID="Video_2"/> 
+			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+				<Video Source="$(CurrentFileWithPathAlias)" ID="$(CurrentValueAlias)"/>
+			</For>
+            <Initial ID="1"/> 
             <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
             <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
             <AutoStart>False</AutoStart>
@@ -45,9 +45,10 @@
         <Title>Video Player</Title>
         <Message>Select which video to play</Message>
         <List>
-            <Item Text="Blame the Cat">Video_1</Item>
-            <Item Text="Sintel Movie Preview">Video_2</Item>
-            <Item Text="Racing like the wind">Video_3</Item>
+			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+				<Item Text="$(CurrentFileAlias)">$(CurrentValueAlias)</Item>
+			</For>
+
         </List>
     </Prompt>
     <TaskList ID = "ShowVideoControl">
