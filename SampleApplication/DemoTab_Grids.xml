@@ -29,7 +29,7 @@
             </StyleOverride>
         </Widget>
 
-        <Grid File="Demo\DemoTab_GridFile.xml" row="1" column="3" hgap="0" vgap="0" Align="Center" Color1="red" Color2="white" > 
+        <Grid File="$(AppDir)\DemoTab_GridFile.xml" row="1" column="3" hgap="0" vgap="0" Align="Center" Color1="red" Color2="white" > 
             <Grid row="1" column="1" hgap="0" vgap="0" Align="Center"> 
                 <Widget File="Spacer.xml" row="0" column="0" Width="50" Height="50">
                     <StyleOverride>
@@ -127,7 +127,7 @@
                 </Grid>
             </Grid>
             <Widget File="Spacer.xml" row="0" column="4" width="10"/>
-            <Grid File="Demo\DemoTab_GridFile.xml" row="0" column="5" hgap="0" vgap="0" rowSpan="3" Align="Center" Color1="goldenrod" Color2="purple" Color3="green"/> 
+            <Grid File="$(AppDir)\DemoTab_GridFile.xml" row="0" column="5" hgap="0" vgap="0" rowSpan="3" Align="Center" Color1="goldenrod" Color2="purple" Color3="green"/> 
         
             <Widget File="Text\Text.xml" row="1" column="0" colSpan="3" rowspan="3">
                 <InitialValue>Grids Within Grids</InitialValue>
@@ -150,111 +150,111 @@
                     <Item>-fx-grid-lines-visible : true</Item>
                 </StyleOverride>
                 <Widget File="Image\ImageScale.xml" row="0" column="0" Task="blankHit_00">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_00" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="0" Task="xHit_00">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_00" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="0" Task="oHit_00">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_00" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="1" Task="blankHit_01">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_01" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="1" Task="xHit_01">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_01" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="1" Task="oHit_01">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_01" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="2" Task="blankHit_02">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_02" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="2" Task="xHit_02">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_02" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="0" column="2" Task="oHit_02">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_02" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="0" Task="blankHit_10">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_10" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="0" Task="xHit_10">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_10" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="0" Task="oHit_10">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_10" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="1" Task="blankHit_11">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_11" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="1" Task="xHit_11">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_11" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="1" Task="oHit_11">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_11" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="2" Task="blankHit_12">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_12" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="2" Task="xHit_12">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_12" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="1" column="2" Task="oHit_12">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_12" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="0" Task="blankHit_20">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_20" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="0" Task="xHit_20">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_20" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="0" Task="oHit_20">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_20" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="1" Task="blankHit_21">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_21" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="1" Task="xHit_21">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_21" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="1" Task="oHit_21">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_21" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="2" Task="blankHit_22">
-                    <Source>Demo\images\blank.jpg</Source>
+                    <Source>$(AppDir)\images\blank.jpg</Source>
                     <Peekaboo ID="blank_22" Namespace="DemoTicTacToe" Default="Show"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="2" Task="xHit_22">
-                    <Source>Demo\images\x.jpg</Source>
+                    <Source>$(AppDir)\images\x.jpg</Source>
                     <Peekaboo ID="x_22" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
                 <Widget File="Image\ImageScale.xml" row="2" column="2" Task="oHit_22">
-                    <Source>Demo\images\o.jpg</Source>
+                    <Source>$(AppDir)\images\o.jpg</Source>
                     <Peekaboo ID="o_22" Namespace="DemoTicTacToe" Default="Hide"/>     
                 </Widget>
             </Grid>

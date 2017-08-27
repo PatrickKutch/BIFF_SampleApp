@@ -27,7 +27,7 @@
             <Title>Click me!</Title>
         </Widget>
 		<Widget File="Image\ImageNoScale.xml" row="1" column="0">
-			<Source>Demo\Images\Baby Penguin.jpg</Source>
+			<Source>$(AppDir)\Images\Baby Penguin.jpg</Source>
 		</Widget>
 			
 		

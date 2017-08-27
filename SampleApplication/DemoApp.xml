@@ -111,6 +111,7 @@
 	<AliasList>
 		<Alias OscarID="OscarDemo"/>
 		<Alias DemoVersion="17.06.16"/>
+		<Alias AppDir="SampleApplication"/>
 	</AliasList>		
 
 	<!-- Task Definition Section -->

@@ -124,7 +124,7 @@
 
 		<Widget File="FlipPanel\FlipPanelWithButtonsVertical.xml" row="3" column="2">
 			<Front>
-				<Widget File="Demo\DemoWidgets\ChartBarDemo.xml" row="1" column="1">
+				<Widget File="$(AppDir)\DemoWidgets\ChartBarDemo.xml" row="1" column="1">
 					<Title>Country Summary</Title>
 					<xAxis Label="Country"/>
 					<yAxis Label="Value" MaxValue="120000"/>

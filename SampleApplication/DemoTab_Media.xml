@@ -30,7 +30,7 @@
             <InitialValue>Audio</InitialValue>
             <StyleOverride ID="Title"/>
         </Widget>
-       <Grid File="Demo\VideoGrid.xml" row="2" column="0"/>
-       <Grid File="Demo\AudioGrid.xml" row="2" column="1"/>
+       <Grid File="$(AppDir)\VideoGrid.xml" row="2" column="0"/>
+       <Grid File="$(AppDir)\AudioGrid.xml" row="2" column="1"/>
     </Tab>
 </MarvinExternalFile>

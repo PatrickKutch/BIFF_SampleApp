@@ -33,7 +33,7 @@
 			<MinionSrc ID="Flip-it-1" Namespace="local"/>
 			<Front>
 				<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme1"> 
-					<Source>Demo\images\Level1Front.png</Source>
+					<Source>$(AppDir)\images\Level1Front.png</Source>
 					<Peekaboo ID="level1front" Namespace="local" Default="show"/>  					
 				</Widget>
 	<!-- Flip Panel 2 -->				
@@ -42,7 +42,7 @@
 					<Peekaboo ID="flip-panel-2" Namespace="local" Default="Hide"/>   					
 					<Front>		
 						<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme2"> 
-							<Source>Demo\images\Level2Front.png</Source>
+							<Source>$(AppDir)\images\Level2Front.png</Source>
 							<Peekaboo ID="level2front" Namespace="local" Default="show"/>						
 						</Widget>							
 		<!-- Beginning of Flip Panel 3 -->
@@ -51,13 +51,13 @@
 							<Peekaboo ID="flip-panel-3" Namespace="local" Default="Hide"/>   							
 							<Front>	
 								<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme3"> 
-									<Source>Demo\images\Level3Front.png</Source>
+									<Source>$(AppDir)\images\Level3Front.png</Source>
 									<Peekaboo ID="level3front" Namespace="local" Default="show"/>						
 								</Widget>
 							</Front>
 							<Back>
 								<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme3-back"> 
-									<Source>Demo\images\Level3Back.png</Source> 
+									<Source>$(AppDir)\images\Level3Back.png</Source> 
 								</Widget>
 							</Back>
 						</Widget>
@@ -65,7 +65,7 @@
 					</Front>
 					<Back>
 						<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme2-back"> 
-							<Source>Demo\images\Level2Back.png</Source> 			
+							<Source>$(AppDir)\images\Level2Back.png</Source> 			
 						</Widget>
 					</Back>
 				</Widget>
@@ -73,7 +73,7 @@
 			</Front>
 			<Back>
 				<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme1-back"> 
-					<Source>Demo\images\Level1Back.png</Source> 			
+					<Source>$(AppDir)\images\Level1Back.png</Source> 			
 				</Widget>
 			</Back>
 		</Widget>

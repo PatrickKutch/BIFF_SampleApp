@@ -29,7 +29,7 @@
     </AliasList>
     <Grid>
         <Widget File="Media\VideoPlayer.xml" row="1" column="0" Align="Center" Width="1000">
-			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+			<For Count='[DirScan:$(AppDir)\Media\:mp4:flv]'>
 				<Video Source="$(CurrentFileWithPathAlias)" ID="$(CurrentValueAlias)"/>
 			</For>
             <Initial ID="1"/> 
@@ -38,14 +38,14 @@
             <AutoStart>False</AutoStart>
             <Repeat Mode="Single">True</Repeat> 
         </Widget>
-        <Grid File = "Demo\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="VideoID" SelectListID="Video Selection"/>
+        <Grid File = "$(AppDir)\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="VideoID" SelectListID="Video Selection"/>
     </Grid>
     
     <Prompt ID="Video Selection" Type="ListBox">
         <Title>Video Player</Title>
         <Message>Select which video to play</Message>
         <List>
-			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+			<For Count='[DirScan:$(AppDir)\Media\:mp4:flv]'>
 				<Item Text="$(CurrentFileAlias)">$(CurrentValueAlias)</Item>
 			</For>
 
