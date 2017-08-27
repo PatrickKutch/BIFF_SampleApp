@@ -25,9 +25,9 @@
 		<Alias MainDialHeight="450"/> 	
 		<Alias OtherDialHeight="292"/> 	
 		<Alias SpacerHeight="250"/>
-		<Alias UpperLeftDial="Demo\DemoWidgets\GaugeRadialSteel.xml"/>
-		<Alias UpperRightDial="Demo/DemoWidgets/GaugeRadialSteel.xml"/>
-		<Alias MainDialidget="Demo/DemoWidgets/MultiGauge/CenterDial.xml"/>
+		<Alias UpperLeftDial="$(AppDir)\DemoWidgets\GaugeRadialSteel.xml"/>
+		<Alias UpperRightDial="$(AppDir)\DemoWidgets/GaugeRadialSteel.xml"/>
+		<Alias MainDialidget="$(AppDir)\DemoWidgets/MultiGauge/CenterDial.xml"/>
 	</AliasList>
 	<Grid>
 		<Grid row="0" column="0">
@@ -53,7 +53,7 @@
 			<Widget File="Spacer.xml" Width="$(SpacerHeight)" Height="$(SpacerHeight)" row="1" column="1"/>
 
 			<!-- **************** Main Dial *********** -->
- 			<Widget File="Demo\DemoWidgets\SimpleGauge.xml" row="0" column="0" align="S" colspan="3" rowspan="3" Height="$(MainDialHeight)">
+ 			<Widget File="$(AppDir)\DemoWidgets\SimpleGauge.xml" row="0" column="0" align="S" colspan="3" rowspan="3" Height="$(MainDialHeight)">
 				<MinionSrc ID="$(CENTER_ID)" Namespace="$(CENTER_NAMESPACE)"/>
 				<StyleOverride File="simplegauge.css"/>
 				<Title>$(CENTER_TITLE)</Title>				

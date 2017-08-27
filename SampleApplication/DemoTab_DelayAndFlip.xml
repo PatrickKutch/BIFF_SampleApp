@@ -34,27 +34,27 @@
         <Grid row="1" column="0" hgap="0" vgap="0">
 			<PaddingOverride Top="0" Bottom="0"/>
 			
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="1" column="0" FlipID="0" Delay="0"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="1" column="1" FlipID="1" Delay="100"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="1" column="2" FlipID="2" Delay="200"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="1" column="3" FlipID="3" Delay="300"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="1" column="4" FlipID="4" Delay="400"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="2" column="4" FlipID="5" Delay="500"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="2" column="3" FlipID="6" Delay="600"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="2" column="2" FlipID="7" Delay="700"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="2" column="1" FlipID="8" Delay="800"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="2" column="0" FlipID="9" Delay="900"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="1" column="0" FlipID="0" Delay="0"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="1" column="1" FlipID="1" Delay="100"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="1" column="2" FlipID="2" Delay="200"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="1" column="3" FlipID="3" Delay="300"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="1" column="4" FlipID="4" Delay="400"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="2" column="4" FlipID="5" Delay="500"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="2" column="3" FlipID="6" Delay="600"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="2" column="2" FlipID="7" Delay="700"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="2" column="1" FlipID="8" Delay="800"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="2" column="0" FlipID="9" Delay="900"/>
 
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="3" column="0" FlipID="10" Delay="1000"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="3" column="1" FlipID="11" Delay="1100"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="3" column="2" FlipID="12" Delay="1200"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="3" column="3" FlipID="13" Delay="1300"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="3" column="4" FlipID="14" Delay="1400"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="4" column="4" FlipID="15" Delay="1500"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="4" column="3" FlipID="16" Delay="1600"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="4" column="2" FlipID="17" Delay="1700"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="4" column="1" FlipID="18" Delay="1800"/>
-            <Grid File="Demo/DemoTab_FlipGrid.xml" row="4" column="0" FlipID="19" Delay="1900"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="3" column="0" FlipID="10" Delay="1000"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="3" column="1" FlipID="11" Delay="1100"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="3" column="2" FlipID="12" Delay="1200"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="3" column="3" FlipID="13" Delay="1300"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="3" column="4" FlipID="14" Delay="1400"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="4" column="4" FlipID="15" Delay="1500"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="4" column="3" FlipID="16" Delay="1600"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="4" column="2" FlipID="17" Delay="1700"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="4" column="1" FlipID="18" Delay="1800"/>
+            <Grid File="$(AppDir)\DemoTab_FlipGrid.xml" row="4" column="0" FlipID="19" Delay="1900"/>
                 
         </Grid>
         

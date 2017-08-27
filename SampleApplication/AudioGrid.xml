@@ -29,10 +29,10 @@
     </AliasList>
     <Grid>
         <Widget File="Media\AudioPlayer.xml" row="1" column="1">
-            <Audio Source="Demo\Media\Silly_Farts-Joe-1473367952.mp3" ID="Audio_1"/>
-            <Audio Source="Demo\Media\can you hear me now.mp3" ID="Audio_2"/>
-            <Audio Source="Demo\Media\toilet_flush_clear-mike-koenig.mp3" ID="Audio_3"/>
-            <Audio Source="Demo\Media\Evil_Laugh_1-Timothy-64737261.mp3" ID="Audio_4"/>
+            <Audio Source="$(AppDir)\Media\Silly_Farts-Joe-1473367952.mp3" ID="Audio_1"/>
+            <Audio Source="$(AppDir)\Media\can you hear me now.mp3" ID="Audio_2"/>
+            <Audio Source="$(AppDir)\Media\toilet_flush_clear-mike-koenig.mp3" ID="Audio_3"/>
+            <Audio Source="$(AppDir)\Media\Evil_Laugh_1-Timothy-64737261.mp3" ID="Audio_4"/>
                         
             <Repeat Mode="LoopList">True</Repeat> 
             <Initial ID="Audio_3"/>
@@ -40,7 +40,7 @@
             <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
             <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
         </Widget>
-        <Grid File = "Demo\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="AudioID" SelectListID="Audio Selection"/>
+        <Grid File = "$(AppDir)\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="AudioID" SelectListID="Audio Selection"/>
     </Grid>
     
     <Prompt ID="Audio Selection" Type="ListBox">

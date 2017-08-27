@@ -25,9 +25,9 @@
 		<Alias MainDialHeight="350"/> 	
 		<Alias OtherDialHeight="192"/> 	
 		<Alias SpacerHeight="200"/>
-		<Alias UpperLeftDial="Demo/DemoWidgets/MultiGauge/UpperLeftDial.xml"/>
-		<Alias UpperRightDial="Demo/DemoWidgets/MultiGauge/UpperRightDial.xml"/>
-		<Alias MainDialidget="Demo/DemoWidgets/MultiGauge/CenterDial.xml"/>
+		<Alias UpperLeftDial="$(AppDir)\DemoWidgets/MultiGauge/UpperLeftDial.xml"/>
+		<Alias UpperRightDial="$(AppDir)\DemoWidgets/MultiGauge/UpperRightDial.xml"/>
+		<Alias MainDialidget="$(AppDir)\DemoWidgets/MultiGauge/CenterDial.xml"/>
 	</AliasList>
 	<Grid>
 		<Grid row="0" column="0">

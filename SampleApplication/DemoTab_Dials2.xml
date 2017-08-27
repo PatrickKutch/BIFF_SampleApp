@@ -10,8 +10,8 @@
 
 	<Tab>
 		<Title>Dials2</Title>
-		<Grid File="Demo/DemoWidgets/GridMultiDial_Demo.xml" row="0" column="0" />
-		<Grid File="Demo/DemoWidgets/GridMultiDial_Demo2.xml" row="0" column="1" />
+		<Grid File="$(AppDir)\DemoWidgets/GridMultiDial_Demo.xml" row="0" column="0" />
+		<Grid File="$(AppDir)\DemoWidgets/GridMultiDial_Demo2.xml" row="0" column="1" />
 		<Widget File="Text\Text.xml" row='1' column='0'>
 			<InitialValue>'GaugeBar'</InitialValue>
 		</Widget>
