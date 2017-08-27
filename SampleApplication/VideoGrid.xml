@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2016 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#
+##############################################################################
+-->
+<MarvinExternalFile>
+    <AliasList>
+        <Alias PlaybackControlNamespace="VideoControlNamespace"/>
+        <Alias MinionNamespace="VideoMinionNamespace"/>
+        <Alias PlaybackControlID = "VIDPBCTRL"/>
+        <Alias MinionID = "VideoPlayer"/>
+        <Alias PlaybackRow="3"/>
+    </AliasList>
+    <Grid>
+        <Widget File="Media\VideoPlayer.xml" row="1" column="0" Align="Center" Width="1000">
+			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+				<Video Source="$(CurrentFileWithPathAlias)" ID="$(CurrentValueAlias)"/>
+			</For>
+            <Initial ID="1"/> 
+            <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
+            <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
+            <AutoStart>False</AutoStart>
+            <Repeat Mode="Single">True</Repeat> 
+        </Widget>
+        <Grid File = "Demo\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="VideoID" SelectListID="Video Selection"/>
+    </Grid>
+    
+    <Prompt ID="Video Selection" Type="ListBox">
+        <Title>Video Player</Title>
+        <Message>Select which video to play</Message>
+        <List>
+			<For Count='[DirScan:Demo\Media\:mp4:flv]'>
+				<Item Text="$(CurrentFileAlias)">$(CurrentValueAlias)</Item>
+			</For>
+
+        </List>
+    </Prompt>
+    <TaskList ID = "ShowVideoControl">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="Peekaboo.$(MinionID)" NameSpace = "Peekaboo.$(MinionNamespace)"  Data="@Hide or Show"/> 
+        </TaskItem>
+    </TaskList>
+</MarvinExternalFile>

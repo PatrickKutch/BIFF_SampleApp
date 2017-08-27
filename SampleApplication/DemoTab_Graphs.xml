@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2016 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#
+##############################################################################
+-->
+
+<MarvinExternalFile>
+	<Tab>
+		<Title>Chart Examples</Title>
+
+		<Widget File="FlipPanel\FlipPanelWithButtonsVertical.xml" row="1" column="1">
+			<Front>
+				<Widget File="Chart\ChartMultiSrcArea.xml" row="1" column="0" Height="400">
+					<Title>Area Chart - Multi-sourced</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100"/>
+					<Series Label="Data Series 1">
+						<MinionSrc ID="GraphSource1" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 2">
+						<MinionSrc ID="GraphSource2" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 3">
+						<MinionSrc ID="GraphSource3" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 4">
+						<MinionSrc ID="GraphSource4" Namespace="DemoNamespace"/>
+					</Series>
+				</Widget> 
+			</Front>
+			<Back Align="Center">
+				<Widget File="Chart\ChartArea.xml" row="2" column="0" >
+					<Title>Area Chart</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100"/>
+					<MinionSrc ID="CombinedSource" Namespace="DemoNamespace"/>
+					<Series Label="Data Series 1"/>
+					<Series Label="Data Series 2"/>
+					<Series Label="Data Series 3"/>
+					<Series Label="Data Series 4"/>
+				</Widget> 
+			</Back>
+		</Widget>
+
+		<Widget File="FlipPanel\FlipPanelWithButtonsVertical.xml" row="1" column="2">
+			<Front>
+				<Widget File="Chart\ChartMultiSrcStackedArea.xml" row="2" column="0" Width="450">
+					<Title>Stacked Area Chart - Multi-sourced</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100"/>
+					<Series Label="Data Series 1">
+						<MinionSrc ID="GraphSource1" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 2">
+						<MinionSrc ID="GraphSource2" Namespace="DemoNamespace"/>
+					</Series>
+				</Widget> 
+			</Front>
+			<Back>
+				<Widget File="Chart\ChartStackedArea.xml" row="2" column="1">
+					<Title>Stacked Area Chart</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100"/>
+					<MinionSrc ID="CombinedSourceStacked" Namespace="DemoNamespace"/>
+					<Series Label="Data Series 1"/>
+					<Series Label="Data Series 2"/>
+				</Widget> 
+			</Back>
+		</Widget>
+		<Widget File="FlipPanel\FlipPanelWithButtonsHorizontal.xml" row="1" column="3">
+			<Front>
+				<Widget File="Chart\ChartMultiSrcLine.xml" row="1" column="1">
+					<Title>Line Chart - Multi-sourced</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100"/>
+					<Series Label="Data Series 1">
+						<MinionSrc ID="GraphSource1" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 2">
+						<MinionSrc ID="GraphSource2" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 3">
+						<MinionSrc ID="GraphSource3" Namespace="DemoNamespace"/>
+					</Series>
+					<Series Label="Data Series 4">
+						<MinionSrc ID="GraphSource4" Namespace="DemoNamespace"/>
+					</Series>
+				</Widget> 
+			</Front>
+
+			<Back>
+				<Widget File="Chart\ChartLine.xml" row="1" column="2">
+					<Title>Line Chart</Title>
+					<xAxis Label="Over Time" MaxEntries="10"/>
+					<yAxis Label="Data Value" MaxValue="100" Count="4"/>
+					<MinionSrc ID="CombinedSource" Namespace="DemoNamespace"/>
+				</Widget> 
+			</Back>
+		</Widget>
+		<Widget File="Chart\ChartPie.xml" row="3" column="1">
+			<Title>Pie Chart</Title>
+			<MinionSrc ID="PieSource" Namespace="DemoNamespace"/>
+			<Slice Label="Slice 1"/>
+			<Slice Label="Slice 2"/>
+			<Slice Label="Slice 3"/>
+			<Slice Label="Slice 4"/>
+		</Widget>
+
+		<Widget File="FlipPanel\FlipPanelWithButtonsVertical.xml" row="3" column="2">
+			<Front>
+				<Widget File="Demo\DemoWidgets\ChartBarDemo.xml" row="1" column="1">
+					<Title>Country Summary</Title>
+					<xAxis Label="Country"/>
+					<yAxis Label="Value" MaxValue="120000"/>
+					<Series ID="Series1" Label="2002"/>
+					<Series ID="Series2" Label="2003"/>
+					<Series ID="Series3" Label="2004"/>
+					<SeriesSet Title="Austria">
+						<MinionSrc ID="Austria02" Namespace="DemoNamespace" SeriesID="Series1"/> 
+						<MinionSrc ID="Austria03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Austria04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="Brazil">
+						<MinionSrc ID="Brazil02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="Brazil03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Brazil04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="France">
+						<MinionSrc ID="France02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="France03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="France04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="Italy">
+						<MinionSrc ID="Italy02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="Italy03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Italy04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="USA">
+						<MinionSrc ID="USA02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="USA03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="USA04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+				</Widget>
+			</Front>
+			<Back>
+				<Widget File="Chart\ChartHorizontalBar.xml" row="1" column="1">
+					<Title>Country Summary</Title>
+					<xAxis Label="Country"/>
+					<yAxis Label="Value" MaxValue="120000"/>
+					<Series ID="Series1" Label="2002"/>
+					<Series ID="Series2" Label="2003"/>
+					<Series ID="Series3" Label="2004"/>
+					<SeriesSet Title="Austria">
+						<MinionSrc ID="Austria02" Namespace="DemoNamespace" SeriesID="Series1"/> 
+						<MinionSrc ID="Austria03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Austria04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="Brazil">
+						<MinionSrc ID="Brazil02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="Brazil03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Brazil04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="France">
+						<MinionSrc ID="France02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="France03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="France04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="Italy">
+						<MinionSrc ID="Italy02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="Italy03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="Italy04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+					<SeriesSet Title="USA">
+						<MinionSrc ID="USA02" Namespace="DemoNamespace" SeriesID="Series1"/>
+						<MinionSrc ID="USA03" Namespace="DemoNamespace" SeriesID="Series2"/>
+						<MinionSrc ID="USA04" Namespace="DemoNamespace" SeriesID="Series3"/>
+					</SeriesSet>
+				</Widget>
+			</Back>
+		</Widget>
+		<Widget File="Chart\ChartBar.xml" row="3" column="3">
+			<Title>CPU</Title>
+			<xAxis Label="CPU Utilization"/>
+			<yAxis Label="Value" MaxValue="100"/>
+			<Series Label="CPU0" ID="Series1"/>
+			<Series Label="CPU1" ID="Series2"/>
+			<Series Label="CPU2" ID="Series3"/>
+			<Series Label="CPU3" ID="Series4"/>
+			<Series Label="CPU4" ID="Series5"/>
+			<Series Label="CPU5" ID="Series6"/>
+			<Series Label="CPU6" ID="Series7"/>
+			<Series Label="CPU7" ID="Series8"/>
+			<Series Label="CPU8" ID="Series9"/>
+			<Series Label="CPU9" ID="Series10"/>
+			<Series Label="CPU10" ID="Series11"/>
+			<Series Label="CPU11" ID="Series12"/>
+			<Series Label="CPU12" ID="Series13"/>
+			<Series Label="CPU13" ID="Series14"/>
+			<Series Label="CPU14" ID="Series15"/>
+			<Series Label="CPU15" ID="Series16"/>
+			<Series Label="CPU16" ID="Series17"/>
+			<Series Label="CPU17" ID="Series18"/>
+			<Series Label="CPU18" ID="Series19"/>
+			<Series Label="CPU19" ID="Series20"/>
+
+			<SeriesSet Title="CPU">
+				<MinionSrc ID="GraphSource1" Namespace="DemoNamespace" SeriesID="Series1"/> 
+				<MinionSrc ID="GraphSource2" Namespace="DemoNamespace" SeriesID="Series2"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series3"/>
+				<MinionSrc ID="GraphSource4" Namespace="DemoNamespace" SeriesID="Series4"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series3"/>
+				<MinionSrc ID="GraphSource4" Namespace="DemoNamespace" SeriesID="Series4"/>
+				<MinionSrc ID="GraphSource1" Namespace="DemoNamespace" SeriesID="Series5"/> 
+				<MinionSrc ID="GraphSource2" Namespace="DemoNamespace" SeriesID="Series6"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series7"/>
+				<MinionSrc ID="GraphSource4" Namespace="DemoNamespace" SeriesID="Series8"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series9"/>
+				<MinionSrc ID="GraphSource1" Namespace="DemoNamespace" SeriesID="Series10"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series11"/>
+				<MinionSrc ID="GraphSource4" Namespace="DemoNamespace" SeriesID="Series12"/>
+				<MinionSrc ID="GraphSource2" Namespace="DemoNamespace" SeriesID="Series13"/>
+				<MinionSrc ID="GraphSource1" Namespace="DemoNamespace" SeriesID="Series14"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series15"/>
+				<MinionSrc ID="GraphSource2" Namespace="DemoNamespace" SeriesID="Series16"/>
+				<MinionSrc ID="GraphSource4" Namespace="DemoNamespace" SeriesID="Series17"/>
+				<MinionSrc ID="GraphSource3" Namespace="DemoNamespace" SeriesID="Series18"/>
+				<MinionSrc ID="GraphSource2" Namespace="DemoNamespace" SeriesID="Series19"/>
+				<MinionSrc ID="GraphSource1" Namespace="DemoNamespace" SeriesID="Series20"/>
+			</SeriesSet>
+		</Widget>
+	</Tab>
+</MarvinExternalFile>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2016 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#
+##############################################################################
+-->
+<MarvinExternalFile>
+    <Grid>
+        <Peekaboo ID="Peekaboo.$(MinionID)" NameSpace = "Peekaboo.$(MinionNamespace)"/>
+        <Widget File="Button\Button.xml" row="0" Column="0" Task="$(MediaID)_Play_Media" Enabled="True">
+            <Title>></Title>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" Column="1" Task="$(MediaID)_Stop_Media">
+            <Title>[]</Title>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" Column="2" Task="$(MediaID)_Pause_Media">
+            <Title>||</Title>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" Column="3" Task="$(MediaID)_Select_Media">
+            <Title>File</Title>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" Column="4" Task="$(MediaID)_Volume_Control">
+            <Title>Vol</Title>
+        </Widget>
+        <Widget File="Button\Button.xml" row="0" Column="5" Task="$(MediaID)_Seek">
+            <Title>Seek</Title>
+        </Widget>
+    </Grid>
+    
+    <TaskList ID = "$(MediaID)_Play_Media">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"  Data="Play"/> 
+        </TaskItem>
+    </TaskList>
+    
+    <TaskList ID = "$(MediaID)_Pause_Media">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)" Data="Pause"/> 
+        </TaskItem>
+    </TaskList>
+    <TaskList ID = "$(MediaID)_Stop_Media">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"  Data="Stop"/> 
+        </TaskItem>
+    </TaskList>    
+    <TaskList ID = "$(MediaID)_Select_Media">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(MinionID)" Namespace="$(MinionNamespace)"  Data="@$(SelectListID)"/> 
+        </TaskItem>
+    </TaskList>    
+    <TaskList ID = "$(MediaID)_Volume_Control">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"  Data="@$(MediaID).Volume Selection"/> 
+        </TaskItem>
+    </TaskList>    
+    <TaskList ID = "$(MediaID)_Seek">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"  Data="@$(MediaID).Seek Selection"/> 
+        </TaskItem>
+    </TaskList>    
+
+    <Prompt ID="$(MediaID).Volume Selection" Type="ListBox">
+        <Title>Volume Level</Title>
+        <Message>Select the Volume for this media player</Message>
+        <List>
+            <Item Text="Mute">Volume:0</Item>
+            <Item Text="100%">Volume:100</Item>
+            <Item Text="25%">Volume:25</Item>
+            <Item Text="50%">Volume:50</Item>
+            <Item Text="75%">Volume:75</Item>
+        </List>
+    </Prompt>
+    <Prompt ID="$(MediaID).Seek Selection" Type="ListBox">
+        <Title>Media Seek</Title>
+        <Message>Select the location to skip to</Message>
+        <List>
+            <Item Text="10%">JumpTo:10</Item>
+            <Item Text="20%">JumpTo:20</Item>
+            <Item Text="30%">JumpTo:30</Item>
+            <Item Text="40%">JumpTo:40</Item>
+            <Item Text="50%">JumpTo:50</Item>
+            <Item Text="60%">JumpTo:60</Item>
+            <Item Text="70%">JumpTo:70</Item>
+            <Item Text="80%">JumpTo:80</Item>
+            <Item Text="90%">JumpTo:90</Item>
+        </List>
+    </Prompt>
+    
+    <Prompt ID="Hide or Show" Type="ListBox">
+        <Title>View</Title>
+        <Message>Select Hide or Show</Message>
+        <List>
+            <Item>Hide</Item>
+            <Item>Show</Item>
+        </List>
+    </Prompt>
+    
+</MarvinExternalFile>

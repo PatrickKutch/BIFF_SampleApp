@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2016 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#
+##############################################################################
+-->
+
+<MarvinExternalFile>
+    <Tab>
+	<Title>Flip It Example</Title>
+		<Widget File="Text\Text.xml" row="0" column="0" colSpan="2">
+			<StyleOverride ID="Bold-Italic-title-White"/>
+			<MinionSrc ID="title-server2" Namespace="local"/>
+			<InitialValue>Flip It Demo</InitialValue>
+		</Widget>
+<!-- Flip Panel 1 -->
+		<Widget File="FlipPanel\FlipPanelNoButtonsVertical.xml" row="1" column="0" colSpan="2" Task="flipme1">
+			<MinionSrc ID="Flip-it-1" Namespace="local"/>
+			<Front>
+				<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme1"> 
+					<Source>Demo\images\Level1Front.png</Source>
+					<Peekaboo ID="level1front" Namespace="local" Default="show"/>  					
+				</Widget>
+	<!-- Flip Panel 2 -->				
+				<Widget File="FlipPanel\FlipPanelNoButtonsHorizontal.xml" row="0" column="0" colSpan="2" >
+					<MinionSrc ID="Flip-it-2" Namespace="local"/>
+					<Peekaboo ID="flip-panel-2" Namespace="local" Default="Hide"/>   					
+					<Front>		
+						<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme2"> 
+							<Source>Demo\images\Level2Front.png</Source>
+							<Peekaboo ID="level2front" Namespace="local" Default="show"/>						
+						</Widget>							
+		<!-- Beginning of Flip Panel 3 -->
+						<Widget File="FlipPanel\FlipPanelNoButtonsVertical.xml" row="0" column="0" colSpan="2" >
+							<MinionSrc ID="Flip-it-3" Namespace="local"/>
+							<Peekaboo ID="flip-panel-3" Namespace="local" Default="Hide"/>   							
+							<Front>	
+								<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme3"> 
+									<Source>Demo\images\Level3Front.png</Source>
+									<Peekaboo ID="level3front" Namespace="local" Default="show"/>						
+								</Widget>
+							</Front>
+							<Back>
+								<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme3-back"> 
+									<Source>Demo\images\Level3Back.png</Source> 
+								</Widget>
+							</Back>
+						</Widget>
+		<!-- End of Flip Panel 3 -->
+					</Front>
+					<Back>
+						<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme2-back"> 
+							<Source>Demo\images\Level2Back.png</Source> 			
+						</Widget>
+					</Back>
+				</Widget>
+	<!-- End of Flip Panel 2 -->				
+			</Front>
+			<Back>
+				<Widget File="Image\ImageScale.xml" row="0" column="0" Task="flipme1-back"> 
+					<Source>Demo\images\Level1Back.png</Source> 			
+				</Widget>
+			</Back>
+		</Widget>
+<!-- End of Flip Panel 1 -->	
+
+<!-- Beginning of TaskLists -->				
+		<TaskList ID="flipme1">
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-1" Namespace="local" Data="flip"/>
+			</TaskItem>		
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="flip-panel-2" Namespace="local" Data="Show"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level1front" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level2front" Namespace="local" Data="show"/> 
+            </TaskItem>			
+		</TaskList>	
+		
+		<TaskList ID="flipme2">
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-2" Namespace="local" Data="flip"/>
+			</TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level2front" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level3front" Namespace="local" Data="show"/> 
+            </TaskItem>				
+		</TaskList>	
+		
+		<TaskList ID="flipme3">
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-3" Namespace="local" Data="flip"/>
+			</TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level3front" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level2front" Namespace="local" Data="Hide"/> 
+            </TaskItem>				
+		</TaskList>
+		
+		<TaskList ID="flipme1-back">
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-1" Namespace="local" Data="flip"/>
+			</TaskItem>			
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="flip-panel-2" Namespace="local" Data="Show"/> 
+            </TaskItem>
+			<TaskItem Type="Marvin"> 
+                <DataToInsert ID="level1front" Namespace="local" Data="Hide"/> 
+            </TaskItem>			
+		</TaskList>	
+		
+		<TaskList ID="flipme2-back">
+			<TaskItem Type="Marvin"> 
+                <DataToInsert ID="level1front" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level2front" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-2" Namespace="local" Data="flip"/>
+			</TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="flip-panel-3" Namespace="local" Data="Show"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level3front" Namespace="local" Data="Show"/> 
+            </TaskItem>				
+		</TaskList>	
+		
+		<TaskList ID="flipme3-back">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level3front" Namespace="local" Data="Show"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level2front" Namespace="local" Data="Show"/> 
+            </TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="level1front" Namespace="local" Data="Show"/> 
+            </TaskItem>
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-3" Namespace="local" Data="flip"/>
+			</TaskItem>
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="flip-panel-3" Namespace="local" Data="hide"/> 
+            </TaskItem>
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="flip-it-2" Namespace="local" Data="flip"/>
+			</TaskItem>			
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="flip-panel-2" Namespace="local" Data="hide"/> 
+            </TaskItem>
+		</TaskList>
+		
+        <TaskList ID="ShowFlip2">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="AltDials" Namespace="local" Data="Show"/> 
+            </TaskItem>
+        </TaskList>
+		
+        <TaskList ID="HideFlip2">
+            <TaskItem Type="Marvin"> 
+                <DataToInsert ID="AltDials" Namespace="local" Data="Hide"/> 
+            </TaskItem>
+        </TaskList>		
+			
+	</Tab>
+</MarvinExternalFile>

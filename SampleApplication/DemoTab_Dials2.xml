@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MarvinExternalFile>
+	<AliasList>
+		<Alias UPPER_MIDRANGE="20" CENTER_MIDRANGE="40" CENTER_MAX="80"/>
+		<Alias UL_ID="TX" UL_NAMESPACE="DemoNamespace" UL_TITLE="TX" UPPER_LEFT_UNIT="Gbps"/>
+		<Alias UR_ID="RX" UR_NAMESPACE="DemoNamespace" UR_TITLE="RX" UPPER_RIGHT_UNIT="Gbps"/>
+		<Alias CENTER_ID="BX" CENTER_NAMESPACE="DemoNamespace" CENTER_TITLE="BX" CENTER_UNITS="Gbps"/>
+	</AliasList>
+
+	<Tab>
+		<Title>Dials2</Title>
+		<Grid File="Demo/DemoWidgets/GridMultiDial_Demo.xml" row="0" column="0" />
+		<Grid File="Demo/DemoWidgets/GridMultiDial_Demo2.xml" row="0" column="1" />
+		<Widget File="Text\Text.xml" row='1' column='0'>
+			<InitialValue>'GaugeBar'</InitialValue>
+		</Widget>
+		<Widget File="Gauge\GaugeBar.xml" row="2" column="0" >
+			<Title>Throughput</Title>
+			<UnitsOverride>BX</UnitsOverride>
+			<MinionSrc ID="BX" Namespace="DemoNamespace"/>
+		</Widget>
+		<Widget File="Text\Text.xml" row='1' column='1'>
+			<InitialValue>'GaugeDoubleBar'</InitialValue>
+		</Widget>
+		<Widget File="Gauge\GaugeDoubleBar.xml" row="2" column="1" >
+			<Title>RX and TX</Title>
+			<InnerMinionSrc ID="TX" Namespace="DemoNamespace"/>
+			<OuterMinionSrc ID="RX" Namespace="DemoNamespace"/>
+		</Widget>
+
+	</Tab>
+
+</MarvinExternalFile>

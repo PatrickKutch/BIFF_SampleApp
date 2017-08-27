@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarvinExternalFile>
+<!--
+##############################################################################
+#  Copyright (c) 2016 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#
+##############################################################################
+-->
+    <AliasList>
+        <Alias PlaybackControlNamespace="AudioControlNamespace"/>
+        <Alias MinionNamespace="AudioMinionNamespace"/>
+        <Alias PlaybackControlID = "VIDPBCTRL"/>
+        <Alias MinionID = "AudioPlayer"/>
+        <Alias PlaybackRow="3"/>
+    </AliasList>
+    <Grid>
+        <Widget File="Media\AudioPlayer.xml" row="1" column="1">
+            <Audio Source="Demo\Media\Silly_Farts-Joe-1473367952.mp3" ID="Audio_1"/>
+            <Audio Source="Demo\Media\can you hear me now.mp3" ID="Audio_2"/>
+            <Audio Source="Demo\Media\toilet_flush_clear-mike-koenig.mp3" ID="Audio_3"/>
+            <Audio Source="Demo\Media\Evil_Laugh_1-Timothy-64737261.mp3" ID="Audio_4"/>
+                        
+            <Repeat Mode="LoopList">True</Repeat> 
+            <Initial ID="Audio_3"/>
+            <AutoStart>False</AutoStart>
+            <PlaybackControl ID="$(PlaybackControlID)" Namespace="$(PlaybackControlNamespace)"/>
+            <MinionSrc ID="$(MinionID)" Namespace="$(MinionNamespace)"/>
+        </Widget>
+        <Grid File = "Demo\MediaControl.xml" row="$(PlaybackRow)" column="0" Align="Center" MediaID="AudioID" SelectListID="Audio Selection"/>
+    </Grid>
+    
+    <Prompt ID="Audio Selection" Type="ListBox">
+        <Title>Video Player</Title>
+        <Message>Select which video to play</Message>
+        <List>
+            <Item Text="Musical Fruit">Audio_1</Item>
+            <Item Text="You there?">Audio_2</Item>
+            <Item Text="Down the Drain">Audio_3</Item>
+            <Item Text="Funny">Audio_4</Item>
+        </List>
+    </Prompt>
+    
+    <TaskList ID = "ShowAudioControl">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="Peekaboo.$(MinionID)" NameSpace = "Peekaboo.$(MinionNamespace)"  Data="@Hide or Show"/> 
+        </TaskItem>
+    </TaskList>
+    
+</MarvinExternalFile>
