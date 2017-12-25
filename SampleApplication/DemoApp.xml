@@ -82,7 +82,8 @@
 			<Tab ID="DemoTab-HTML"/>
 			<Tab ID="DemoTab-Grids"/>
 			<Tab ID="DemoTab-QuickView"/>
-			<Tab ID="DemoTab-Demo"/>            
+			<Tab ID="DemoTab-Demo"/>      
+			<Tab ID="DemoTab-DynamicGrids"/>
 		</Tabs>
 	</Application>
 
@@ -99,6 +100,7 @@
 	<Tab ID="DemoTab-Media" Align="Center" File="SampleApplication\DemoTab_Media.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-QuickView" Align="Center" File="SampleApplication\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-HTML" Align="Center" File="SampleApplication\DemoTab_HTML.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-DynamicGrids" Align="Center" File="SampleApplication\DemoTab_DynamicGrids.xml" hgap="10" vgap="10"/>    
 	
 	<Tab ID="Welcome" Align="Center">
 		<Title>Welcome</Title>
@@ -117,10 +119,6 @@
 	<!-- Task Definition Section -->
 
 	<!-- Marvin Control Tasks -->
-	<TaskList ID="Startup" PerformOnStartup="True">
-		<TaskItem Type="OtherTask" ID="GoLive" Postpone="15000"/>
-	</TaskList>
-
 	<TaskList ID="Start.Traffic.1" >
 		<TaskItem Type="OtherTask" ID="File1Chose"/>
 		<TaskItem Type="OtherTask" ID="Flipit" Postpone="500"/>

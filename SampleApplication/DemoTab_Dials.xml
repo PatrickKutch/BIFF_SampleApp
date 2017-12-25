@@ -21,127 +21,133 @@
 -->
 
 <MarvinExternalFile>
-        <AliasList>
-            <Alias DialWidth="280"/> 	
-        </AliasList>
-		
-    <Tab>
-        <Title>Dials</Title>
-		<Widget File="Text\Text.xml" row='0' column='1'>
-			<InitialValue>'Gauge'</InitialValue>
-		</Widget>
-        <Widget File="$(AppDir)\DemoWidgets\Gauge10GbE.xml" row="1" column="1" Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-        </Widget>
-		<Widget File="Text\Text.xml" row='0' column='2'>
-			<InitialValue>'GaugeSimple'</InitialValue>
-		</Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeSimple10GbE.xml" row="1" column="2" Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-        </Widget>
-		
-		
-		<Widget File="Text\Text.xml" row='0' column='3'>
-			<InitialValue>'GaugeOneEighty'</InitialValue>
-		</Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeOneEighty10GbE.xml" row="1" column="3" Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-        </Widget>
-		<Widget File="Text\Text.xml" row='0' column='4'>
-			<InitialValue>'GaugeRadial'</InitialValue>
-		</Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeRadial.xml" row="1" column="4" Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-        </Widget>
+	<AliasList>
+		<Alias DialWidth="19%g"/> 	<!-- each dial width is 19% of grid width -->
+	</AliasList>
 
-		<Widget File="Text\Text.xml" row='0' column='5'>
-			<InitialValue>'GaugeRadialSteel'</InitialValue>
-		</Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeRadialSteel.xml" row="1" column="5" Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-        </Widget>
-        
-        <Widget File="$(AppDir)\DemoWidgets\Gauge10GbE_test.xml" row="2" column="1"  Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <!-- <StyleOverride File="demo1.css"/> -->
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
-        </Widget>
-        <Widget File="$(AppDir)\DemoWidgets\10GigSimpleGauge.xml" row="2" column="2"  Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <StyleOverride File="simplegauge.css"/>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
-        </Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeOneEighty10GbE.xml" row="2" column="3"  Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <StyleOverride File="oneeightygauge1.css"/>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
-        </Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeRadial.IOPs.xml" row="2" column="4"  Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+	<Tab>
+		<Title>Dials</Title>
+		<Grid row="0" column="0" Width="90%"> <!-- grid width is 90% of application width -->
+			<Widget File="Text\Text.xml" row='0' column='1'>
+				<InitialValue>'Gauge'</InitialValue>
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\Gauge10GbE.xml" row="1" column="1" Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="Text\Text.xml" row='0' column='2'>
+				<InitialValue>'GaugeSimple'</InitialValue>
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeSimple10GbE.xml" row="1" column="2" Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+			</Widget>
 
-        </Widget>
-        <Widget File="$(AppDir)\DemoWidgets\GaugeRadialSteel.xml" row="2" column="5"  Width="$(DialWidth)">
-            <Title>Throughput</Title>
-            <StyleOverride>
-                <Item>-body: black; -tick-mark-fill: white; -tick-label-fill: white</Item>
-            </StyleOverride>
-            <MinionSrc ID="3to10" Namespace="DemoNamespace"/>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
-        </Widget>
-        
-        <Widget File="Button\Button.xml" row="3" column="3" Task="ShowHiddenDials" >
-            <Title>Click me!</Title>
-        </Widget>
-        <Widget File="Text\Text.xml" row="2" column="0" rowSpan="2" >
-            <InitialValue>New Styles!</InitialValue>
-            <StyleOverride >
-                <Item>-fx-rotate:-90;</Item>
-            </StyleOverride>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
-        </Widget>
-        <Widget File="Button\Button.xml" row="3" column="3" Task="HideHiddenDials">
-            <StyleOverride ID="round-red">
-                <Item>-fx-font-size:2.5em;</Item>
-            </StyleOverride>
-            <Title> Click me!</Title>
-            <Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide" />     
-        </Widget>
-    
-	
-    </Tab>
-        <TaskList ID="ShowHiddenDials">
-            <TaskItem Type="Marvin"> 
-                <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Show"/> <!-- Use peekaboo to show some dials -->
-            </TaskItem>
-        </TaskList>
-        <TaskList ID="HideHiddenDials">
-            <TaskItem Type="Marvin"> 
-                <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Hide"/> <!-- Use peekaboo to hide some dials -->
-            </TaskItem>
-        </TaskList>
-        <TaskList ID="PauseDials">
-            <TaskItem Type="Marvin"> 
-                <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Pause"/> <!-- Use peekaboo to pause some dials -->
-            </TaskItem>
-        </TaskList>
-        <TaskList ID="ResumeDials">
-            <TaskItem Type="Marvin"> 
-                <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Resume"/>  <!-- Use peekaboo to resume some dials -->
-            </TaskItem>
-        </TaskList>
-        <TaskList ID="TestTask" PerformOnStartup="true">  <!-- Sets the initial value, when app runs, just for fun -->
-            <TaskItem Type="Marvin">
-                <DataToInsert ID="3to10" Namespace="DemoNamespace" Data="3.4"/>
-            </TaskItem>
-        </TaskList>	
+
+			<Widget File="Text\Text.xml" row='0' column='3'>
+				<InitialValue>'GaugeOneEighty'</InitialValue>
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeOneEighty10GbE.xml" row="1" column="3" Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+			</Widget>
+			<Widget File="Text\Text.xml" row='0' column='4'>
+				<InitialValue>'GaugeRadial'</InitialValue>
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeRadial.xml" row="1" column="4" Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+			</Widget>
+
+			<Widget File="Text\Text.xml" row='0' column='5'>
+				<InitialValue>'GaugeRadialSteel'</InitialValue>
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeRadialSteel.xml" row="1" column="5" Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+			</Widget>
+
+			<Widget File="$(AppDir)\DemoWidgets\Gauge10GbE_test.xml" row="2" column="1"  Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<!-- <StyleOverride File="demo1.css"/> -->
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\10GigSimpleGauge.xml" row="2" column="2"  Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<StyleOverride File="simplegauge.css"/>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeOneEighty10GbE.xml" row="2" column="3"  Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<StyleOverride File="oneeightygauge1.css"/>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeRadial.IOPs.xml" row="2" column="4"  Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+
+			</Widget>
+			<Widget File="$(AppDir)\DemoWidgets\GaugeRadialSteel.xml" row="2" column="5"  Width="$(DialWidth)">
+				<Title>Throughput</Title>
+				<StyleOverride>
+					<Item>-body: black; -tick-mark-fill: white; -tick-label-fill: white</Item>
+				</StyleOverride>
+				<MinionSrc ID="3to10" Namespace="DemoNamespace"/>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+			</Widget>
+
+			<Widget File="Button\Button.xml" row="3" column="3" Task="ShowHiddenDials" >
+				<Title>Click me!</Title>
+			</Widget>
+			<Widget File="Text\Text.xml" row="2" column="0" rowSpan="2" >
+				<InitialValue>New Styles!</InitialValue>
+				<StyleOverride >
+					<Item>-fx-rotate:-90;</Item>
+				</StyleOverride>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide"/>     
+			</Widget>
+			<Widget File="Button\Button.xml" row="3" column="3" Task="HideHiddenDials">
+				<StyleOverride ID="round-red">
+					<Item>-fx-font-size:2.5em;</Item>
+				</StyleOverride>
+				<Title> Click me!</Title>
+				<Peekaboo ID="AltDials" Namespace="DemoNamespace_Dials" Default="Hide" />     
+			</Widget>
+		</Grid>    
+
+	</Tab>
+	<TaskList ID="ShowHiddenDials">
+		<TaskItem Type="Marvin"> 
+			<DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Show"/>
+			<!-- Use peekaboo to show some dials -->
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="HideHiddenDials">
+		<TaskItem Type="Marvin"> 
+			<DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Hide"/>
+			<!-- Use peekaboo to hide some dials -->
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="PauseDials">
+		<TaskItem Type="Marvin"> 
+			<DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Pause"/>
+			<!-- Use peekaboo to pause some dials -->
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="ResumeDials">
+		<TaskItem Type="Marvin"> 
+			<DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Resume"/>
+			<!-- Use peekaboo to resume some dials -->
+		</TaskItem>
+	</TaskList>
+	<TaskList ID="TestTask" PerformOnStartup="true">
+		<!-- Sets the initial value, when app runs, just for fun -->
+		<TaskItem Type="Marvin">
+			<DataToInsert ID="3to10" Namespace="DemoNamespace" Data="3.4"/>
+		</TaskItem>
+	</TaskList>	
 </MarvinExternalFile>
