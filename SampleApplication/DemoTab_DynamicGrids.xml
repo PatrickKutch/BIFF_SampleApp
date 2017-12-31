@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2017 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: Shows Dynamic Grids, Transitions and for loops
+#
+##############################################################################
+-->
+
+<MarvinExternalFile>
+	<AliasList>
+		<Alias DialWidth="280"/> 	
+		<Alias GridCount="13"/>
+		<Alias Transition_1="VERTICAL_AROUND_X" Transition_2="VERTICAL_AROUND_Y" Transition_3="VERTICAL_AROUND_X_AND_Y"/>
+		<Alias Transition_4="HORIZONTAL_AROUND_X" Transition_5="HORIZONTAL_AROUND_Y" Transition_6="HORIZONTAL_AROUND_X_AND_Y"/>
+		<Alias Transition_7="RECTANGULAR_AROUND_X" Transition_8="RECTANGULAR_AROUND_Y" Transition_9="RECTANGULAR_AROUND_X_AND_Y"/>
+		<Alias Transition_10="DISSOLVING_BLOCKS" Transition_11="CUBE" Transition_12="FLIP_HORIZONTAL" Transition_13="FLIP_VERTICAL"/>
+		<Alias TASK_1="Prev_Grid" TASK_2="Next_Grid" TASK_1_DATA="Previous" TASK_2_DATA="Next"/>
+	</AliasList>
+
+	<Tab>
+		<Title>Dynamic Grids</Title>
+		<Grid row="$(CurrentRowAlias)" column="$(CurrentColumnAlias)">
+			<Widget File="Button\Button.xml" row="0" column="0" Task="Prev_Grid">
+				<Title>Previous</Title>
+			</Widget>
+			<Widget File="Button\Button.xml" row="0" column="1" Task="Next_Grid">
+				<Title>Next</Title>
+			</Widget>
+		</Grid>
+		<DynamicGrid row="$(NextRowAlias)" column="$(CurrentColumnAlias)">
+			<For Count="$(GridCount)" StartValue="1">
+				<GridFile Source="$(AppDir)\DialGrid.xml" ID="DIAL_$(CurrentValueAlias)" Title="Grid #$(CurrentValueAlias) $(TRANSITION_$(CurrentValueAlias))">
+					<Transition>$(TRANSITION_$(CurrentValueAlias))</Transition>
+				</GridFile>
+			</For>
+			<Initial ID="DIAL_1"/>
+			<MinionSrc ID="DynamicGrid" Namespace="DGridNS"/>
+		</DynamicGrid>
+
+	</Tab>
+
+	<For Count="2" StartValue="1">
+		<TaskList ID="$(TASK_$(CurrentValueAlias))">
+			<TaskItem Type="Marvin">
+				<DataToInsert ID="DynamicGrid" Namespace="DGridNS" Data="$(TASK_$(CurrentValueAlias)_DATA)"/>
+			</TaskItem>
+		</TaskList>	
+	</For>
+</MarvinExternalFile>
