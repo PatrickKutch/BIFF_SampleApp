@@ -22,13 +22,14 @@
 #
 ##############################################################################
 -->
-	<Application ID="DemoBIFFApplication" mode="debugg" Scale="Auto" MarvinLocalData="enabled">
-		<CreationSize Width="1680" Height="1016"/>
+	<Application ID="DemoBIFFApplication" mode="debugg" Scale="auto" MarvinLocalData="enabled">
+		<CreationSize Width="1920" Height="1040"/>
 		<Network Port="5200"/> 
 		<Title>BIFF Instrumenation Framework Demo - $(DemoVersion)</Title>
-		<Padding top="2" bottom="2" right="2" left="2"/>
+		<Padding top="0" bottom="0" right="0" left="0"/>
 		<StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
-
+		<!-- Optional, to specify which montitor to launch on" -->
+		<MonitorNumber>1</MonitorNumber>
 		<Heartbeat Rate="10"/>
 		<IgnoreWebCerts>True</IgnoreWebCerts> <!-- for Web Widget -->
 
@@ -46,7 +47,7 @@
 			</OddStyle>
 		</UnregisteredData>
 
-		<MainMenu Show="True">
+		<MainMenu Show="true">
 			<!-- True or False Global show or hide menu but Tasks on Widgets still work if Global Tasks are enabled -->
 			<Menu Title="Test">
 				<MenuItem Text="Click Me via Menu" Task="ShowHiddenDials"/>
@@ -68,6 +69,7 @@
 				<MenuItem Text="Show Text Tab" Task="Show TextTab"/>
 			</Menu>
 		</MainMenu>
+		
 		<Tabs>
 			<!-- Declare which tabs and in what order -->
 			<Tab ID="Welcome"/>            
@@ -84,10 +86,11 @@
 			<Tab ID="DemoTab-QuickView"/>
 			<Tab ID="DemoTab-Demo"/>      
 			<Tab ID="DemoTab-DynamicGrids"/>
+			<Tab ID="DemoTab-SVG"/>        
 		</Tabs>
 	</Application>
 
-	<!-- This is where you define the tabs -->
+	<!-- This is where you define the tabs [order here does not matter]-->
 	<Tab ID="DemoTab-Charts" Align="Center" File="SampleApplication\DemoTab_Graphs.xml"/>
 	<Tab ID="DemoTab-Charts2" Align="Center" File="SampleApplication\DemoTab_Graphs2.xml"/>
 	<Tab ID="DemoTab-Grids" Align="Center" File="SampleApplication\DemoTab_Grids.xml" Color3="blue"/>
@@ -101,6 +104,7 @@
 	<Tab ID="DemoTab-QuickView" Align="Center" File="SampleApplication\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-HTML" Align="Center" File="SampleApplication\DemoTab_HTML.xml" hgap="10" vgap="10"/>    
 	<Tab ID="DemoTab-DynamicGrids" Align="Center" File="SampleApplication\DemoTab_DynamicGrids.xml" hgap="10" vgap="10"/>    
+	<Tab ID="DemoTab-SVG" Align="Center" File="SampleApplication\DemoTab_SVG.xml"/>
 	
 	<Tab ID="Welcome" Align="Center">
 		<Title>Welcome</Title>
@@ -108,11 +112,10 @@
             <Source>SampleApplication\images\logo.png</Source>
         </Widget>
 	</Tab>
-
 	<!-- Global Alias List -->	
 	<AliasList>
 		<Alias OscarID="OscarDemo"/>
-		<Alias DemoVersion="17.06.16"/>
+		<Alias DemoVersion="18.01.06"/>
 		<Alias AppDir="SampleApplication"/>
 	</AliasList>		
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2017 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#    Triangle Shaped button with hover.
+#
+##############################################################################
+-->
+<MarvinExternalFile>
+	<AliasList>
+		<DefaultAlias SVG_TEXT="" />					
+		<DefaultAlias SVG_TEXT_LOC="Center"/>
+		<DefaultAlias TOP_PAD="0" BOTTOM_PAD="0" RIGHT_PAD="0" LEFT_PAD="0"/>
+		<DefaultAlias SVG_TASK=""/>
+	</AliasList>
+
+	<Grid hgap="0" vgap="0" align="Center">
+		<PaddingOverride top="$(TOP_PAD)" bottom="$(BOTTOM_PAD)" right="$(RIGHT_PAD)" left="$(LEFT_PAD)" />
+		<ClickThroughTransparent>True</ClickThroughTransparent>
+
+		<Widget File="SVG/ScalableVectorGraphic.xml" row="0" column="0" Width="$(SVG_WIDTH)" Height="$(SVG_HEIGHT)" Align="$(SVG_TEXT_LOC)" Task="$(SVG_TASK)">
+			<InitialValue>$(SVG_TEXT)</InitialValue>
+			<MinionSrc Namespace="$(SVG_NAMESPACE)" ID="$(SVG_ID)" />
+			<Peekaboo Namespace="$(SVG_PEEKABOO_NAMESPACE)" ID="$(SVG_PEEKABOO_ID)" />
+			<Shape>M 0 0 L 0 10 L10 5 Z</Shape>
+			<StyleOverride ID="$(SVG_HOVER)">
+				<Item>-svg-main-color:$(SVG_COLOR)</Item>
+				<Item>
+					 -fx-font-size:$(SVG_TEXT_SIZE);
+					 -fx-text-fill:$(SVG_TEXT_COLOR);
+					 -fx-font-family:$(SVG_TEXT_FONT);
+				</Item>				
+				<Item>$(SVG_CUSTOM_STYLE)</Item>
+			</StyleOverride>
+		</Widget> 
+	</Grid>
+
+
+	<TaskList ID="WestPressed">
+		<TaskItem Type="Marvin">
+			<DataToInsert ID="Action" Namespace="$(TABID)" Data="West Pressed"/>
+		</TaskItem>
+	</TaskList>		
+</MarvinExternalFile>	

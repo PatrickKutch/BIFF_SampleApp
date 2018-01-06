@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+#  Copyright (c) 2017 Intel Corporation
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+##############################################################################
+#    File Abstract: 
+#    This example tab demonstrates several fun things, including SVG (Scalable 
+#    Vector Graphics) Widget.  ClickThoughTransparent for overlapping grids/widgets,
+#    Grid and Widget sizes as percentages of application dimentsions or parent grid
+##############################################################################
+-->
+<MarvinExternalFile>
+	<AliasList>
+		<Alias SVG_COLOR="blue"/>
+		<Alias SVG_TEXT_SIZE="1.75em"/>
+		<Alias SVG_TEXT_COLOR="white"/>
+		<Alias SVG_TEXT_FONT="&quot;Swiss911 UCm BT&quot;"/>
+		<Alias SVG_ID="ID.NORTH" SVG_NAMESPACE="$(TABID).NORTH"/>
+		<Alias SVG_PEEKABOO_ID="PEEKABOO.NORTH" SVG_PEEKABOO_NAMESPACE="$(TABID).PEEKABOO.NORTH"/>
+		<Alias SVG_HOVER="" SVG_CUSTOM_STYLE=""/>
+		<Alias HEX_SHAPE = "M 0 15 L 10 0 L 20 0 30 15 L 20 30 10 30 z"/>
+		<Alias GRID_SIZE_PERCENT="80"/>
+	</AliasList>
+	
+	<Tab Align="Center">
+		<Title>Scalable Vector Graphics</Title>
+		<!-- Any place in grid without something drawn, will allow mouse clicks to items underneath -->
+		<!-- Propagate means apply this rule to any 'sub' grids, unless they explicitly set a different value -->
+		<ClickThroughTransparent Propagate="True">True</ClickThroughTransparent> 
+
+		<!-- Define a Macro grid that has a sinlge SVG widget, and a task-->
+		<GridMacro Name="HEX_MACRO">
+			<TaskList ID="HexTask.$(HexNum)">
+				<TaskItem Type="Marvin">
+					<DataToInsert ID="Action" Namespace="$(TABID)" Data="$(HexNum) Pressed"/>
+				</TaskItem>
+			</TaskList>
+			<Widget File="SVG/ScalableVectorGraphic.xml" row="0" column="0" Width="$(SVG_WIDTH)" Height="$(SVG_HEIGHT)" Task="HexTask.$(HexNum)">
+				<InitialValue>$(SVG_TEXT) $(HexNum)</InitialValue>
+				<Shape>$(SHAPE)</Shape>
+				<StyleOverride ID="$(SVG_HOVER)">
+					<Item>-svg-main-color:$(SVG_COLOR)</Item>
+					<Item>
+					 -fx-font-size:$(SVG_TEXT_SIZE);
+					 -fx-text-fill:$(SVG_TEXT_COLOR);
+					 -fx-font-family:$(SVG_TEXT_FONT);
+					</Item>				
+				</StyleOverride>
+			</Widget> 
+		</GridMacro>		
+		<!-- Define a Macro grid made up of HEX_MACRO Grids -->
+		<GridMacro Name="HEX_GRID">
+			<AliasList>
+				<Alias WIDGET_WIDTH="25" /> <!-- Make widget this % size of the containing grid -->
+				<!-- use % of parent grid to determine the size of the widgets -->
+				<Alias SVG_HEIGHT="$(WIDGET_WIDTH)%g" SVG_WIDTH="$(WIDGET_WIDTH)%g"/>
+				<!-- Use some of this to do marvin math to figure out where to place things -->
+				<Alias ROW_SPACER_Width="MarvinMath($(WIDGET_WIDTH),div,3)%g" ROW_SPACER_Height="$(WIDGET_WIDTH)%g"/>
+				<Alias COL_SPACER_Width="MarvinMath($(WIDGET_WIDTH),div,3)%g" COL_SPACER_Height="MarvinMath($(WIDGET_WIDTH),div,2)%g"/>
+			</AliasList>
+
+			<Grid Row="0" column="0">
+				<Widget File="Spacer.xml" row="0" column="1" Width="$(ROW_SPACER_Width)" Height="$(ROW_SPACER_Height)"/>
+
+				<!-- insert a bunch of Grid Macros, and pass along a unique thing for text and task id -->
+				<Grid Macro="HEX_MACRO" Row="0" Column="0" SVG_COLOR="Blue" HexNum="1"/> 
+				<Grid Macro="HEX_MACRO" Row="0" Column="2" SVG_COLOR="Red" HexNum="2" />
+
+				<Grid Macro="HEX_MACRO" Row="1" Column="0" SVG_COLOR="red" HexNum="3"/>
+				<Grid Macro="HEX_MACRO" Row="1" Column="2" SVG_COLOR="blue" HexNum="4"/>
+
+				<Grid Macro="HEX_MACRO" Row="2" Column="0" SVG_COLOR="Yellow" HexNum="5"/>
+				<Grid Macro="HEX_MACRO" Row="2" Column="2" SVG_COLOR="Red" HexNum="6"/>
+			</Grid>
+			<Grid Row="0" column="0">
+				<Widget File="Spacer.xml" row="0" column="1" Width="$(COL_SPACER_Width)" Height="$(COL_SPACER_Height)"/>
+
+				<Grid Macro="HEX_MACRO" Row="1" Column="1" SVG_COLOR="yellow" HexNum="7"/>
+				<Grid Macro="HEX_MACRO" Row="2" Column="1" SVG_COLOR="Green" HexNum="8"/>
+				<Grid Macro="HEX_MACRO" Row="3" Column="1" SVG_COLOR="grey" HexNum="9"/>
+			</Grid>
+		</GridMacro>
+
+		<!-- another grid macro, for a different dynamic grid, this time using exernal widget files instead of macros -->
+		<GridMacro Name="Tri-Grid" row="1" column="0">
+			<Grid row="0" column="0">
+				<AliasList>
+					<Alias SVG_WIDTH="100%g" />
+					<Alias SVG_HEIGHT="50%g" />			
+				</AliasList>
+				<Grid File="$(AppDir)\DemoWidgets\SVG_TRI_North.xml" row="0" column="1" hgap="0" vgap="0" SVG_TEXT_COLOR="Black" SVG_COLOR="Yellow" SVG_TEXT="North" SVG_TASK="NorthPressed"/>
+				
+				<Grid File="$(AppDir)\DemoWidgets\SVG_TRI_South.xml" row="1" column="1" hgap="0" vgap="0" SVG_TEXT_COLOR="Black" SVG_COLOR="Green" SVG_TEXT="South" SVG_TASK="SouthPressed"/>
+			</Grid>
+
+			<Grid row="0" column="0" Align="Center">
+				<AliasList>
+					<Alias SVG_WIDTH="50%g" />
+					<Alias SVG_HEIGHT="100%g" />			
+				</AliasList>			
+
+				<Grid Row="1" column="1">
+					<Grid File="$(AppDir)\DemoWidgets\SVG_TRI_West.xml" row="0" column="0" hgap="0" vgap="0" SVG_TEXT_COLOR="Black" SVG_COLOR="Grey" SVG_TEXT="West" SVG_TASK="WestPressed" rowspan="2"/>
+
+					<Grid File="$(AppDir)\DemoWidgets\SVG_TRI_East.xml" row="1" column="2" hgap="0" vgap="0" SVG_TEXT_COLOR="Black" SVG_COLOR="Blue" SVG_TEXT="East" SVG_TASK="EastPressed" />
+				</Grid>
+			</Grid>
+		</GridMacro>		
+
+		<!-- create a grid to hold the text of which button was pressed.  Let's make its height 8% of our possible canvas -->
+		<Grid row="0" column="1" Height="8%" >
+			<Widget File="button\Button.xml" row="1" column="0" Width="60" Height="50" Task="Next" Align="W">
+				<Title>Change</Title>
+			</Widget>
+			<Widget File="Text\Text.xml" row="1" column="1" >
+				<StyleOverride ID="Description"/>
+				<MinionSrc ID="Action" Namespace="$(TABID)"/>
+				<InitialValue>Click panel</InitialValue>
+			</Widget>
+		</Grid>
+
+		<!-- Now the dynamic grid to show the different SVG grids.  We want 'square' widgets, and a screen is not square
+			 so let's make the width proportional to the height, using the SCREEN_W2H_RATIO provided and some marvin math -->
+		<DynamicGrid row="2" column="1" Width="MarvinMath($(GRID_SIZE_PERCENT),*,$(SCREEN_W2H_RATIO))%" Height="$(GRID_SIZE_PERCENT)%" Align="Center">
+			<GridFile Macro="HEX_Grid" ID="HEX" SVG_TEXT="Hex" SVG_TEXT_COLOR="Black" Shape="$(HEX_SHAPE)" />
+			<GridFile Macro="Tri-Grid" ID="Tri"/> 
+			<MinionSrc ID="DynaGrid" Namespace="$(TABID)"/>
+			<Initial ID ="Tri"/>
+		</DynamicGrid>
+	</Tab>
+
+	<TaskList ID="Next">
+		<TaskItem Type="Marvin">
+			<DataToInsert ID="DynaGrid" Namespace="$(TABID)" Data="Next"/>
+		</TaskItem>
+	
+	</TaskList>
+
+
+
+</MarvinExternalFile>
