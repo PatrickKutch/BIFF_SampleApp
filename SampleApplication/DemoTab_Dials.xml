@@ -27,7 +27,7 @@
 
 	<Tab>
 		<Title>Dials</Title>
-		<Grid row="0" column="0" Width="90%"> <!-- grid width is 90% of application width -->
+		<Grid row="0" column="0" Width="90%" hgap="2%g"> <!-- grid width is 90% of application width -->
 			<Widget File="Text\Text.xml" row='0' column='1'>
 				<InitialValue>'Gauge'</InitialValue>
 			</Widget>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MarvinExternalFile>
-<!--
+	<!--
 ##############################################################################
 #  Copyright (c) 2016 Intel Corporation
 # 
@@ -20,53 +20,68 @@
 #
 ##############################################################################
 -->
-    <Tab>
-        <Title>More Examples</Title>
-        <Widget File="Chart\ChartStackedBar.xml" row="1" column="1">
-            <Title>Stacked Chart</Title>
-            <xAxis Label="Server"/>
-            <yAxis Label="Throughput" MaxValue="80"/>
-            <Series ID="Series1" Label="Tx"/>
-            <Series ID="Series2" Label="Rx"/>
-            <SeriesSet Title="Server1">
-                <MinionSrc ID="StackedTx_Server1" Namespace="DemoNamespace" SeriesID="Series1"/> 
-                <MinionSrc ID="StackedRx_Server1" Namespace="DemoNamespace" SeriesID="Series2"/>
-            </SeriesSet>
-            <SeriesSet Title="Server2">
-                <MinionSrc ID="StackedTx_Server2" Namespace="DemoNamespace" SeriesID="Series1"/>
-                <MinionSrc ID="StackedRx_Server2" Namespace="DemoNamespace" SeriesID="Series2"/>
-            </SeriesSet>
-            <SeriesSet Title="Server3">
-                <MinionSrc ID="StackedTx_Server3" Namespace="DemoNamespace" SeriesID="Series1"/>
-                <MinionSrc ID="StackedRx_Server3" Namespace="DemoNamespace" SeriesID="Series2"/>
-            </SeriesSet>
-            <SeriesSet Title="Server4">
-                <MinionSrc ID="StackedTx_Server4" Namespace="DemoNamespace" SeriesID="Series1"/>
-                <MinionSrc ID="StackedRx_Server4" Namespace="DemoNamespace" SeriesID="Series2"/>
-            </SeriesSet>
-        </Widget>
-        
-        <Widget File="Chart\ChartBar.xml" row="1" column="2" Width="800">
-            <Title> CPU Utilization</Title>
-            <xAxis Label="CPU Number" Count="80"/>
-            <yAxis Label="% Utilization" MaxValue="100"/>
-            <MinionSrc ID="CPU_LIST" Namespace="DemoNamespace"/> 
-            <StyleOverride>
-                <Item>-fx-legend-visible:false;
-                    -fx-bar-gap:1;-fx-category-gap:1;</Item>
-            </StyleOverride>
-        </Widget>
-    <Widget File="Chart\ChartStackedArea.xml" row="2" column="1" ColSpan="2" Height="400" Width="1500">
-        <Title>40GbE Tx queues</Title>
-        <xAxis Label="Over Time" MaxEntries="30"/>
-        <yAxis Label="(Gbps)" MaxValue="40" Count="20"/>
-        <StyleOverride>
-            <Item>
-                -fx-legend-visible:false;
-            </Item>
-        </StyleOverride>
-        <MinionSrc ID="tx-allqueues.tx_bytes" Namespace="DemoNamespace"/>
+	<Tab>
+		<Title>More Examples</Title>
+		<Widget File="Chart\ChartStackedBar.xml" row="1" column="1">
+			<Title>Stacked Chart</Title>
+			<xAxis Label="Server"/>
+			<yAxis Label="Throughput" MaxValue="80"/>
+			<Series ID="Series1" Label="Tx"/>
+			<Series ID="Series2" Label="Rx"/>
+			<SeriesSet Title="Server1">
+				<MinionSrc ID="StackedTx_Server1" Namespace="DemoNamespace" SeriesID="Series1"/> 
+				<MinionSrc ID="StackedRx_Server1" Namespace="DemoNamespace" SeriesID="Series2"/>
+			</SeriesSet>
+			<SeriesSet Title="Server2">
+				<MinionSrc ID="StackedTx_Server2" Namespace="DemoNamespace" SeriesID="Series1"/>
+				<MinionSrc ID="StackedRx_Server2" Namespace="DemoNamespace" SeriesID="Series2"/>
+			</SeriesSet>
+			<SeriesSet Title="Server3">
+				<MinionSrc ID="StackedTx_Server3" Namespace="DemoNamespace" SeriesID="Series1"/>
+				<MinionSrc ID="StackedRx_Server3" Namespace="DemoNamespace" SeriesID="Series2"/>
+			</SeriesSet>
+			<SeriesSet Title="Server4">
+				<MinionSrc ID="StackedTx_Server4" Namespace="DemoNamespace" SeriesID="Series1"/>
+				<MinionSrc ID="StackedRx_Server4" Namespace="DemoNamespace" SeriesID="Series2"/>
+			</SeriesSet>
+		</Widget>
 
-    </Widget>        
-    </Tab>
+		<Widget File="Chart\ChartBar.xml" row="1" column="2" Width="800">
+			<Title> CPU Utilization</Title>
+			<xAxis Label="CPU Number" Count="80"/>
+			<yAxis Label="% Utilization" MaxValue="100"/>
+			<MinionSrc ID="CPU_LIST" Namespace="DemoNamespace"/> 
+			<StyleOverride>
+				<Item>-fx-legend-visible:false;
+                    -fx-bar-gap:1;-fx-category-gap:1;</Item>
+			</StyleOverride>
+		</Widget>
+		<Grid row="2" column="1" ColSpan="2" Height="400" Width="1500" hgap="0" vgap="0">
+			<Padding top="0" bottom="0"/>
+			<Widget File="Chart\ChartStackedArea.xml" row="0" column="0" Height="50%g" Width="100%g">
+				<!--<Title>40GbE Queues</Title>-->
+				<xAxis MaxEntries="30"/>
+				<yAxis Label="Tx" MaxValue="40" Count="20"/>
+				<StyleOverride>
+					<Item>
+                -fx-legend-visible:false;
+					</Item>
+				</StyleOverride>
+				<MinionSrc ID="tx-allqueues.tx_bytes" Namespace="DemoNamespace"/>
+			</Widget>        
+			<Widget File="Chart\ChartStackedArea.xml" row="1" column="0" Height="50%g" Width="100%g">
+				
+				<xAxis Label="Over Time" MaxEntries="30"/>
+				<yAxis Label="Rx" MinValue="-40" MaxValue="0" Count="20"/>
+				<StyleOverride>
+					<Item>
+                -fx-legend-visible:false;
+				-fx-title-side: bottom;
+					</Item>
+				</StyleOverride>
+				<MinionSrc ID="rx-allqueues.rx_bytes" Namespace="DemoNamespace"/>
+			</Widget>        
+			
+		</Grid>
+	</Tab>
 </MarvinExternalFile>
