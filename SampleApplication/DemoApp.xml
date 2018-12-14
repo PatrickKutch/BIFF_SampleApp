@@ -109,10 +109,10 @@
     <Tab ID="DemoTab-DynamicGrids" Align="Center" File="SampleApplication\DemoTab_DynamicGrids.xml" hgap="10" vgap="10"/>    
     <Tab ID="DemoTab-SVG" Align="Center" File="SampleApplication\DemoTab_SVG.xml"/>
 	
-    <Tab ID="Welcome" Align="Center" Task="SHIT">
+    <Tab ID="Welcome" Align="Center">
         <Title>Welcome</Title>
         <Widget File="Image\ImageScale.xml" row="1" column="1"  Width="1000">
-            <Source>SampleApplication\images\logo.png</Source>
+            <Source>SampleApplication\Images\Logo.png</Source>
         </Widget>
     </Tab>
     <!-- Global Alias List -->	
