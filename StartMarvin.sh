@@ -1,0 +1,2 @@
+java -jar BIFF.Marvin.jar -i SampleApplication/DemoApp.xml -v -log MarvinLog.html
+#rem -Dhttp.proxyHost=proxy.myproxy.company.com -Dhttp.proxyPort=911 -jar BIFF.Marvin.jar -i $(AppDir)\demoapp.xml -v -log MarvinLog.html.html

@@ -147,7 +147,21 @@
 	<TaskList ID="TestTask" PerformOnStartup="true">
 		<!-- Sets the initial value, when app runs, just for fun -->
 		<TaskItem Type="Marvin">
-			<DataToInsert ID="3to10" Namespace="DemoNamespace" Data="3.4"/>
+                    <DataToInsert ID="3to10" Namespace="DemoNamespace" Data="3.4"/>
 		</TaskItem>
-	</TaskList>	
+	</TaskList>
+        
+    <TaskList ID="ChangeDialRange">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Marvin:[ValueRange Min='0' Max='5'][/ValueRange]"/>
+            <DataToInsert ID="3to10" Namespace="DemoNamespace" Data="4.5"/>
+        </TaskItem>
+    </TaskList>
+    <TaskList ID="RestoreDialRange">
+        <TaskItem Type="Marvin">
+            <DataToInsert ID="AltDials" Namespace="DemoNamespace_Dials" Data="Marvin:[ValueRange Min='0' Max='10'][/ValueRange]"/>
+            <DataToInsert ID="3to10" Namespace="DemoNamespace" Data="5"/>
+        </TaskItem>
+    </TaskList>
+                	
 </MarvinExternalFile>
