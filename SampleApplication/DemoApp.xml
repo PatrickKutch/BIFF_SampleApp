@@ -118,7 +118,7 @@
     <!-- Global Alias List -->	
     <AliasList>
         <Alias OscarID="OscarDemo"/>
-        <Alias DemoVersion="18.01.06"/>
+        <Alias DemoVersion="18.12.14"/>
         <Alias AppDir="SampleApplication"/>
         <Alias OscarIP="localhost" OscarPort="5100" OscarKey="Identifying Key"/>
     </AliasList>		
