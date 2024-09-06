@@ -24,7 +24,7 @@
     -->
     <Application ID="DemoBIFFApplication" mode="debugg" Scale="auto" MarvinLocalData="enabled">
         <CreationSize Width="1920" Height="1040"/>
-        <Network Port="5300"/>
+        <Network Port="5200"/>
         <Title>BIFF Instrumenation Framework Demo - $(DemoVersion)</Title>
         <Padding top="0" bottom="0" right="0" left="0"/>
         <StyleSheet>Widget/Modena-BIFF.css</StyleSheet>
@@ -75,11 +75,11 @@
 		
         <Tabs>
             <!-- Declare which tabs and in what order -->
-            <Tab ID="Welcome"/>            
+           <Tab ID="Welcome"/>            
             <Tab ID="DemoTab-Dials"/>            
-            <Tab ID="DemoTab-MoreDials"/>            
+            <Tab ID="DemoTab-MoreDials"/>           
             <Tab ID="DemoTab-Indicators"/>            
-            <Tab ID="DemoTab-LCD"/>            
+           <Tab ID="DemoTab-LCD"/>            
             <Tab ID="DemoTab-Charts"/>	 
             <Tab ID="DemoTab-Charts2"/>	 
             <Tab ID="DemoTab-Images"/>
@@ -89,36 +89,36 @@
             <Tab ID="DemoTab-QuickView"/>
             <Tab ID="DemoTab-Demo"/>      
             <Tab ID="DemoTab-DynamicGrids"/>
-            <Tab ID="DemoTab-SVG"/>        
+            <Tab ID="DemoTab-SVG"/>       
         </Tabs>
     </Application>
 
     <!-- This is where you define the tabs [order here does not matter]-->
-    <Tab ID="DemoTab-Charts" Align="Center" File="SampleApplication\DemoTab_Graphs.xml"/>
-    <Tab ID="DemoTab-Charts2" Align="Center" File="SampleApplication\DemoTab_Graphs2.xml"/>
-    <Tab ID="DemoTab-Grids" Align="Center" File="SampleApplication\DemoTab_Grids.xml" Color3="blue"/>
-    <Tab ID="DemoTab-Images" Align="Center" File="SampleApplication\DemoTab_Images.xml"/>
-    <Tab ID="DemoTab-Dials" Align="Center" File="SampleApplication\DemoTab_Dials.xml" hgap="5" vgap="5"/>    
-    <Tab ID="DemoTab-MoreDials" Align="Center" File="SampleApplication\DemoTab_Dials2.xml" hgap="5" vgap="5"/>    
-    <Tab ID="DemoTab-Indicators" Align="Center" File="SampleApplication\DemoTab_Indicators.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-LCD" Align="Center" File="SampleApplication\DemoTab_LCD.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-Demo" Align="Center" File="SampleApplication\DemoTab_Demo.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-Media" Align="Center" File="SampleApplication\DemoTab_Media.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-QuickView" Align="Center" File="SampleApplication\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-HTML" Align="Center" File="SampleApplication\DemoTab_HTML.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-DynamicGrids" Align="Center" File="SampleApplication\DemoTab_DynamicGrids.xml" hgap="10" vgap="10"/>    
-    <Tab ID="DemoTab-SVG" Align="Center" File="SampleApplication\DemoTab_SVG.xml"/>
+    <Tab ID="DemoTab-Charts" Align="Center" File="$(AppDir)\DemoTab_Graphs.xml"/>
+    <Tab ID="DemoTab-Charts2" Align="Center" File="$(AppDir)\DemoTab_Graphs2.xml"/>
+    <Tab ID="DemoTab-Grids" Align="Center" File="$(AppDir)\DemoTab_Grids.xml" Color3="blue"/>
+    <Tab ID="DemoTab-Images" Align="Center" File="$(AppDir)\DemoTab_Images.xml"/>
+    <Tab ID="DemoTab-Dials" Align="Center" File="$(AppDir)\DemoTab_Dials.xml" hgap="5" vgap="5"/>    
+    <Tab ID="DemoTab-MoreDials" Align="Center" File="$(AppDir)\DemoTab_Dials2.xml" hgap="5" vgap="5"/>    
+    <Tab ID="DemoTab-Indicators" Align="Center" File="$(AppDir)\DemoTab_Indicators.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-LCD" Align="Center" File="$(AppDir)\DemoTab_LCD.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-Demo" Align="Center" File="$(AppDir)\DemoTab_Demo.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-Media" Align="Center" File="$(AppDir)\DemoTab_Media.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-QuickView" Align="Center" File="$(AppDir)\DemoTab_Quick.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-HTML" Align="Center" File="$(AppDir)\DemoTab_HTML.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-DynamicGrids" Align="Center" File="$(AppDir)\DemoTab_DynamicGrids.xml" hgap="10" vgap="10"/>    
+    <Tab ID="DemoTab-SVG" Align="Center" File="$(AppDir)\DemoTab_SVG.xml"/>
 	
     <Tab ID="Welcome" Align="Center">
         <Title>Welcome</Title>
         <Widget File="Image\ImageScale.xml" row="1" column="1"  Width="1000">
-            <Source>SampleApplication\Images\Logo.png</Source>
+            <Source>$(AppDir)\Images\Logo.png</Source>
         </Widget>
     </Tab>
     <!-- Global Alias List -->	
     <AliasList>
         <Alias OscarID="OscarDemo"/>
-        <Alias DemoVersion="18.12.14"/>
+        <Alias DemoVersion="24.09.06"/>
         <Alias AppDir="SampleApplication"/>
         <Alias OscarIP="localhost" OscarPort="5100" OscarKey="Identifying Key"/>
     </AliasList>		

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ##############################################################################
-#  Copyright (c) 2016 Intel Corporation
+#  Copyright (c) 2024 Intel Corporation
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -21,39 +21,80 @@
 -->
 
 <MarvinExternalFile>
-	<Tab>
-		<Title>Indicators</Title>
-		<Widget File="Text\Text.xml" row="0" column="0" Align="Center">
-			<InitialValue> Various Indicator and Progress Widgets</InitialValue>
-			<StyleOverride ID="Title"/>
-		</Widget>
-		<Grid row="1" column="0" Align="Center">
-			<Widget File="Indicator\ProgressBar.xml" row="1" column="1" Width="800" Height="40" colSpan="2">
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="Indicator\ProgressIndicator.xml" row="2" column="1"  Width="400">
-				<Title>Throughput</Title>
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="Indicator\ProgressIndicator.xml" row="2" column="2"  Width="400" Height="400">
-				<StyleOverride ID="red"/>
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="LED\BargraphHorizontalLED1.xml" row="3" column="1" Width="400" Align="Center">
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="LED\BargraphHorizontalLED.xml" row="3" column="2" Width="400" Align="Center">
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="LED\BargraphVerticalLED.xml" row="1" column="4" Height="400" rowSpan="3" >
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-			<Widget File="LED\BargraphVerticalLED1.xml" row="1" column="3" Height="400" rowSpan="3" >
-				<MinionSrc ID="Progress" Namespace="DemoNamespace"/>
-			</Widget>
-		</Grid>
-	</Tab>
+    <Tab>
+        <Title>Indicators</Title>
+        <Widget File="Text\Text.xml" row="0" column="0" Align="Center">
+            <InitialValue> Various Indicator and Progress Widgets</InitialValue>
+            <StyleOverride ID="Title"/>
+        </Widget>
+        <Grid row="1" column="0" Align="Center">
+            <Widget File="Indicator\ProgressBar.xml" row="1" column="1" Width="800" Height="40" colSpan="2">
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="Indicator\ProgressIndicator.xml" row="2" column="1"  Width="400">
+                <Title>Throughput</Title>
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="Indicator\ProgressIndicator.xml" row="2" column="2"  Width="400" Height="400">
+                <StyleOverride ID="red"/>
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="LED\BargraphHorizontalLED1.xml" row="3" column="1" Width="400" Align="Center">
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="LED\BargraphHorizontalLED.xml" row="3" column="2" Width="400" Align="Center">
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="LED\BargraphVerticalLED.xml" row="1" column="4" Height="400" rowSpan="3" >
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+            <Widget File="LED\BargraphVerticalLED1.xml" row="1" column="3" Height="400" rowSpan="3" >
+                <MinionSrc ID="Progress" Namespace="DemoNamespace"/>
+            </Widget>
+        </Grid>
+        <Grid row="$(NextRowAlias)" column="$(CurrentColumnAlias)" Align="Center">
+            <Widget File="Text\GradientPanel.xml" row="1" column="1" Align="W" width="400" height="400" >
+                <Title>Heat Map</Title>
+                <Decimals>0</Decimals>
+                <ValueRange Min="0" Max="100"/>
+                <MinionSrc ID="Gradient.1" Namespace="DemoNamespace"/>
+
+                <StyleOverride ID="rounded">
+                </StyleOverride>
+                <Colors>
+                    <Color>
+                        <Hex>#7492B9</Hex>  <!-- Blue -->
+                        <Weight>0.75</Weight>
+                    </Color>
+                    <Color>
+                        <Hex>#E10600</Hex>  <!-- Red --> 
+                        <Weight>0.25</Weight>
+                    </Color>
+                </Colors>
+            </Widget>
+            <Widget File="Text\GradientPanel.xml" row="1" column="2" Align="W" width="400" height="400" >
+                <Title>Stop Light - 3 colors</Title>
+                <Decimals>0</Decimals>
+                <ValueRange Min="0" Max="100"/>
+                <MinionSrc ID="Gradient.1" Namespace="DemoNamespace"/>
+                <Colors>
+                    <Color>
+                        <Hex>#4CBB17</Hex>  <!-- Green --> 
+                        <Weight>0.4</Weight>
+                    </Color>
+                    <Color>
+                        <Hex>#FFEF00</Hex>  <!-- Yellow --> 
+                        <Weight>0.5</Weight>
+                    </Color>
+                    <Color>
+                        <Hex>#E60000</Hex>  <!-- Red --> 
+                        <Weight>0.1</Weight>
+                    </Color>
+                </Colors>
+            </Widget>
+        </Grid>
+    </Tab>
     <AliasList>
-		<Alias DEBUG_STYLE="-fx-border-color:yellow;-fx-border-style: dotted"/>
-	</AliasList>
+        <Alias DEBUG_STYLE="-fx-border-color:yellow;-fx-border-style: dotted"/>
+    </AliasList>
 </MarvinExternalFile>
