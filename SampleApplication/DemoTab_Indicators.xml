@@ -58,8 +58,10 @@
                 <Decimals>0</Decimals>
                 <ValueRange Min="0" Max="100"/>
                 <MinionSrc ID="Gradient.1" Namespace="DemoNamespace"/>
-
-                <StyleOverride ID="rounded">
+                <ShowValue>True</ShowValue>
+                <ShowTitle>True</ShowTitle>
+               <StyleOverride ID="rounded">
+                        <Item>-fx-border-width: 8px;</Item>
                 </StyleOverride>
                 <Colors>
                     <Color>
