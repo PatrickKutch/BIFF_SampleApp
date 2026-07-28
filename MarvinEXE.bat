@@ -1,0 +1,1 @@
+Marvin.exe -i SampleApplication\demoapp.xml -v -log %computername%.htmls
