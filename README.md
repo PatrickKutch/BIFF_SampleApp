@@ -1,4 +1,4 @@
-"# BIFF Sample Application" 
+# BIFF Sample Application
 This is the sample application for the Board Instrumentation Framework located at https://github.com/PatrickKutch/Board-Instrumentation-Framework
 
 [![BIFF](Images/BIFF.png)](https://github.com/PatrickKutch/Board-Instrumentation-Framework)
