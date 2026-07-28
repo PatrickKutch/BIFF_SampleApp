@@ -1,7 +1,7 @@
 # BIFF Sample Application
 This is the sample application for the Board Instrumentation Framework located at https://github.com/PatrickKutch/Board-Instrumentation-Framework
 
-[![BIFF](Images/BIFF.png)](https://github.com/PatrickKutch/Board-Instrumentation-Framework)
+[![BIFF](images/BIFF.png)](https://github.com/PatrickKutch/Board-Instrumentation-Framework)
 
 # Instructions
 For demo purposes, assume we start in c:\
@@ -55,6 +55,6 @@ java -jar BIFF.Marvin.jar -i SampleApplication\demoapp.xml
 ```
 
 All 3 apps should be up and running now.  Marvin should have a bunch of tabs and look something like:
-![Charts](Images/Screenie.png)
+![Charts](images/Screenie.png)
 
 
